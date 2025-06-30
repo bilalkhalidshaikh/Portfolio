@@ -26,17 +26,31 @@ A handcrafted dark-themed masterpiece portfolio — engineered for elite perform
 
 ---
 
-## 🧩 Tech Stack
+## 🧩 My Tech Stack
 
 | Domain      | Stack Highlights                         |
 | ----------- | ---------------------------------------- |
-| Frontend    | React, Next.js, TypeScript, Tailwind     |
-| Backend     | Node.js, API Routes, Server Actions      |
-| AI & Agents | Langchain, OpenAI, Agentic Architectures |
-| DevOps      | Vercel, GitHub Actions, CI/CD            |
-| Design      | Figma, CSS Artistry                      |
-| Databases   | Firebase, MongoDB, Planetscale           |
-| Tooling     | Yarn, Postman, ESLint, Husky             |
+| Frontend    | React, Next.js, TypeScript, Tailwind CSS, Shadcn/ui |
+| Backend     | Node.js, FastAPI, API Routes, Server Actions, Neon + Prisma |
+| AI & Agents | Agentic AI, Multi-AI Agent Systems, Langchain, OpenAI, AutoGen, CrewAI |
+| Robotics    | Humanoid Robotics, ROS 2, NVIDIA Isaac™ AI, Gazebo Simulator, Unity |
+| Cloud       | Cloud-Native, Serverless Containers, Azure Container Apps, Kubernetes |
+| DevOps      | Vercel, GitHub Actions, CI/CD, Docker, Rancher Desktop |
+| Databases   | Supabase, Firebase, PlanetScale, CockroachDB, Neo4j, Pinecone |
+| Messaging   | Kafka, RabbitMQ, Redis, Upstash Redis, CloudAMQP |
+| AI Frameworks | PyTorch, Ray, FastAI, Generative Adversarial Networks (GANs), Transformers |
+| Data Science | Data Preparation, Model Deployment, Optimization Strategies, RAG (Retrieval-Augmented Generation) |
+| Programming | Python, Asynchronous Programming (asyncio), Object-Oriented Programming (OOP), Static Typing |
+| Design      | Figma, CSS Artistry, Design Thinking, Multi-Modal User Interface |
+| Security    | Cyber Security, AI Ethics and Governance, Blockchain Integration |
+| Web3        | Smart Contracts, dApps, Metaverse, Decentralized Applications |
+| Tooling     | Yarn, Postman, ESLint, Husky, DevContainer |
+| AI Memory   | Agentic Memory, Short-Term Memory, Long-Term Memory, LangMem, mem0 |
+| Architecture| Event-Driven Architecture (EDA), Three-Tier Microservices, Stateless Computing |
+| Development | AI-First Development, Cloud-First Development, Human-in-the-Loop (HITL) Oversight |
+| Optimization | AdamW (Optimizer), Learning Rate Schedulers, Gradient Clipping, PyTorch Distributed |
+| Analytics   | Forecasting (Classical Predictive AI), Knowledge Graphs, Distributed Machine Learning |
+
 
 ---
 
