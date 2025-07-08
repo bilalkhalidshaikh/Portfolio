@@ -9,7 +9,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { skillsData } from "@/lib/data";
 import { useTheme } from "@/context/theme-context";
 
-const fadeInAnimationVariants = {
+const fadeInAnimationVariants:any = {
   initial: { opacity: 0, y: 40, scale: 0.9 },
   animate: (index: number) => ({
     opacity: 1,
