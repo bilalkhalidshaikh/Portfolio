@@ -41,7 +41,7 @@ export default function FullScreenModal({
           whileTap={{ scale: 0.9 }}
           onClick={() => {
             onClose();
-            new Audio("/sounds/click.mp3").play();
+            new Audio("/sounds/click.wav").play();
           }}
         >
           ✕

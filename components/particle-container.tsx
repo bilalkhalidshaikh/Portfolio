@@ -105,3 +105,14 @@
 // };
 
 // export default ParticleContainer;
+
+
+
+
+import React from 'react'
+
+export default function ParticleContainer() {
+  return (
+    <div style={{background:"#333"}}></div>
+  )
+}

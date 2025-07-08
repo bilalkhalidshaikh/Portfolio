@@ -1,28 +1,72 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef,useState } from "react";
 import { motion } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-// import ParticleContainer from "./particle-container";
 import githubdp from "@/public/githubdp.jpg";
+import signature from "@/public/signature.png"; // Adjust if filename differs
 import { TypeAnimation } from "react-type-animation";
 import SectionHeading from "./section-heading";
+import ThreeDBackground from "./ThreeDBackground"; // Import the 3D background component
+import { Canvas,useFrame } from "@react-three/fiber";
+import { Sparkles } from "@react-three/drei";
+import { useTheme } from "@/context/theme-context";
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { theme } = useTheme();
 
   return (
     <section
       ref={ref}
+      // style={{ background: "#111827" }}
       id="home"
-      className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4"
+      className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4 relative overflow-hidden"
     >
-      {/* <ParticleContainer /> */}
+      {/* <ThreeDBackground /> */}
+        {/* 3D Background Sparkles */}
+            <div className="absolute inset-0 z-[-1] pointer-events-none">
+              <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
+                <Sparkles
+                  count={100}
+                  scale={[20, 20, 20]}
+                  size={3}
+                  speed={0.5}
+                  color={theme === "light" ? "#0ea5e9" : "#38bdf8"}
+                />
+              </Canvas>
+            </div>
+
+      {/* Signature Background */}
+      <motion.div
+        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none"
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 0.25, scale: 1.03 }}
+        transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+      >
+        <motion.div
+          className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none"
+          initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0 }}
+          animate={{ clipPath: "inset(0 0% 0 0)", opacity: 0.25 }}
+          transition={{ duration: 4, ease: "easeInOut", delay: 1 }}
+        >
+          <Image
+            src={signature}
+            alt="Bilal Khalid Signature"
+            className="w-[80%] max-w-[700px] object-contain translate-y-24"
+            quality={95}
+            priority
+            style={{ position: "fixed" }}
+          />
+        </motion.div>
+      </motion.div>
+
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -141,52 +185,61 @@ export default function Intro() {
         <br />
         <TypeAnimation
           sequence={[
-            "AI Agentic Systems Engineer",
+            "AI-Native Full Stack Engineer",
             2000,
-            "Full-Stack Solutions Architect",
+            "Agentic Systems Architect",
             2000,
-            "Cross-Platform Mobile Expert",
+            "LLM-Orchestrated Application Developer",
             2000,
-            "Blockchain-CLOUD Synergy Architect",
+            "Cross-Platform Mobile Engineer",
             2000,
-            "Generative AI Strategist",
+            "Next.js + React Native Expert",
             2000,
-            "React/React Native Specialist",
+            "Generative AI Product Builder",
             2000,
-            "Decentralized Systems Architect",
+            "Autonomous Systems Developer",
             2000,
-            "Enterprise Scalability Engineer",
+            "Agentic Workflow Engineer",
             2000,
-            "AI-Driven Product Architect",
+            "End-to-End Web App Architect",
             2000,
-            "Cloud-Native Solutions Engineer",
+            "AI-First Innovation Strategist",
             2000,
-            "Smart Contract Developer",
+            "Autonomous App Solutions Architect",
             2000,
-            "ML-Powered App Engineer",
+            "Cloud-Native SaaS Architect",
             2000,
           ]}
           wrapper="span"
           speed={50}
           repeat={Infinity}
-          className="font-bold block mt-4 text-gray-900 dark:text-white"
+          className="font-bold block mt-4 text-neutral-900 dark:text-neutral-100"
         />
+
         <span className="text-xl sm:text-2xl mt-6 block text-gray-700 dark:text-gray-200">
           Building at the intersection of{" "}
           <span className="font-semibold text-cyan-600 dark:text-cyan-300">
             React
           </span>
           ,{" "}
-          <span className="font-semibold text-purple-600 dark:text-purple-400">
+          <span className="font-semibold text-orange-400 dark:text-orange-300">
             TensorFlow
           </span>
           ,{" "}
-          <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+          <span className="font-semibold text-gray-400 dark:text-gray-300">
             Solidity
           </span>
-          , and{" "}
-          <span className="font-semibold text-blue-600 dark:text-blue-300">
+          ,{" "}
+          <span className="font-semibold text-blue-500 dark:text-blue-400">
             Kubernetes
+          </span>
+          ,{" "}
+          <span className="font-semibold text-fuchsia-400 dark:text-fuchsia-300">
+            Agentic AI
+          </span>
+          , and{" "}
+          <span className="font-semibold text-indigo-400 dark:text-indigo-300">
+            Decentralized Systems
           </span>
         </span>
       </motion.h1>
@@ -208,7 +261,6 @@ export default function Intro() {
           href="https://github.com/bilalkhalidshaikh"
           target="_blank"
         >
-          {/* Floating Code Particles */}
           <div className="absolute inset-0 overflow-hidden">
             {["{", "}", "<", ">"].map((char, i) => (
               <motion.span
@@ -244,7 +296,6 @@ export default function Intro() {
             </motion.span>
           </span>
 
-          {/* Hover Glow */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100"
             initial={{ x: -100 }}
@@ -268,7 +319,6 @@ export default function Intro() {
           href="https://www.linkedin.com/in/bilalkhalidshaikh"
           target="_blank"
         >
-          {/* Connection Animation */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(4)].map((_, i) => (
               <motion.div
@@ -302,12 +352,10 @@ export default function Intro() {
             </motion.span>
           </span>
 
-          {/* Grid Background */}
           <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
             <div className="absolute inset-0 bg-[length:20px_20px] bg-grid-white/10" />
           </div>
 
-          {/* Hover Gloss */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-30"
             initial={{ x: -100 }}

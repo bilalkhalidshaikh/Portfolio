@@ -26,7 +26,6 @@ import stormySpadeImg from "@/public//stormySpadeImg.jpg";
 import determinedBearImg from "@/public//determinedBearImg.jpg";
 import dogWalkerImg from "@/public//dogWalkerImg.jpg";
 
-
 export const links = [
   {
     name: "Home",
@@ -54,38 +53,72 @@ export const links = [
   },
 ] as const;
 
+// export const experiencesData = [
+//   {
+//     title: "Software Engineer",
+//     location: "Humanforce",
+//     description:
+//       "Software engineer in the intelliHR platform team. We are a feature enablement team dedicated to developing features for developers, ensuring they are easier to create. We also look after issues of scale and technical debt for developers and the platform.",
+//     icon: React.createElement(CgWorkAlt),
+//     date: "January 2024 - Present",
+//   },
+//   {
+//     title: "Software Engineer",
+//     location: "The University of Queensland",
+//     description:
+//       "Full-stack software engineer in the Application Development and Support team. Worked on web applications such as CAHP (Casual Academic Hire and Payment), UQ Maps, UQ Donations, and Programs and Courses.",
+//     icon: React.createElement(CgWorkAlt),
+//     date: "November 2022 - January 2024",
+//   },
+//   {
+//     title: "Junior Developer",
+//     location: "YouPay",
+//     description:
+//       "Developed new features using Laravel, Vue.js, PHP, JavaScript, Tailwind CSS, MySQL and REST APIs. Created an email notification system for mechants to receive weekly/monthly summaries of YouPay carts created, paid and cancelled. I also integrated YouPay into dozens of stores.",
+//     icon: React.createElement(CgWorkAlt),
+//     date: "February 2022 - November 2022",
+//   },
+//   {
+//     title: "Web Developer",
+//     location: "M3 Digital - Contract",
+//     description:
+//       "Front-end development for a variety of Shopify stores such as FitazFK, Rider Collective, Masseuse Massage, Francesca Jewellery and Salty Captain. Developed high quality landing pages and front end features using HTML, CSS, SCSS, JavaScript and Liquid.",
+//     icon: React.createElement(CgWorkAlt),
+//     date: "September 2021 - February 2022",
+//   },
+// ] as const;
 export const experiencesData = [
   {
-    title: "Software Engineer",
-    location: "Humanforce",
+    title: "Full Stack Engineer & Lead Developer",
+    location: "Achroweb Solutions",
     description:
-      "Software engineer in the intelliHR platform team. We are a feature enablement team dedicated to developing features for developers, ensuring they are easier to create. We also look after issues of scale and technical debt for developers and the platform.",
+      "Led AI-powered SaaS development using Next.js, Supabase, FastAPI, and OpenAI, implementing scalable microservices with Kubernetes, LangGraph, and CrewAI. Architected full-stack automation pipelines with hybrid memory (Redis, Pinecone) and delivered multilingual, interactive user experiences through agentic LLM workflows.",
     icon: React.createElement(CgWorkAlt),
-    date: "January 2024 - Present",
+    date: "2023 – Present",
   },
   {
-    title: "Software Engineer",
-    location: "The University of Queensland",
+    title: "SaaS Engineer & Tech Architect",
+    location: "TFTSOL",
     description:
-      "Full-stack software engineer in the Application Development and Support team. Worked on web applications such as CAHP (Casual Academic Hire and Payment), UQ Maps, UQ Donations, and Programs and Courses.",
+      "Designed backend-first SaaS platforms using Node.js, PostgreSQL, RabbitMQ, and GraphQL. Architected secure APIs, real-time messaging systems, and distributed service layers. Led multi-tenant dashboard systems and implemented async operations across large-scale client infrastructures.",
     icon: React.createElement(CgWorkAlt),
-    date: "November 2022 - January 2024",
+    date: "2020 – 2023",
   },
   {
-    title: "Junior Developer",
-    location: "YouPay",
+    title: "Web Platform Engineer & Performance Optimizer",
+    location: "VERIOR Technologies",
     description:
-      "Developed new features using Laravel, Vue.js, PHP, JavaScript, Tailwind CSS, MySQL and REST APIs. Created an email notification system for mechants to receive weekly/monthly summaries of YouPay carts created, paid and cancelled. I also integrated YouPay into dozens of stores.",
+      "Built enterprise-grade web systems using React, TypeScript, and REST APIs. Optimized UX/UI performance with SSR, code-splitting, and core web vitals. Applied cloud deployment and CI/CD for production-grade rollout with advanced web security protocols.",
     icon: React.createElement(CgWorkAlt),
-    date: "February 2022 - November 2022",
+    date: "2020 – 2022",
   },
   {
-    title: "Web Developer",
-    location: "M3 Digital - Contract",
+    title: "Frontend Lead & Tech Strategist",
+    location: "Level Up Tech Studios",
     description:
-      "Front-end development for a variety of Shopify stores such as FitazFK, Rider Collective, Masseuse Massage, Francesca Jewellery and Salty Captain. Developed high quality landing pages and front end features using HTML, CSS, SCSS, JavaScript and Liquid.",
+      "Delivered SEO-optimized, mobile-first web apps with React, Tailwind CSS, and Next.js. Engineered component libraries, collaborated on design implementation, and executed responsive design systems for multiple B2B clients.",
     icon: React.createElement(CgWorkAlt),
-    date: "September 2021 - February 2022",
+    date: "2019 – 2021",
   },
 ] as const;
 
@@ -786,12 +819,6 @@ export const experiencesData = [
 //   },
 // ] as const;
 
-
-
-
-
-
-
 export interface ProjectData {
   title: string;
   description: string;
@@ -820,7 +847,12 @@ export const projectsData: ProjectsData = {
       description:
         "A charming e-commerce platform for handmade crafts, featuring product listings, cart, and secure payments. Built with React and Stripe for seamless transactions, with Bootstrap for responsive design. Optimized for fast checkout and user-friendly navigation.",
       tags: ["JavaScript", "React", "Stripe", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:stripe", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:stripe",
+        "logos:bootstrap",
+      ],
       imageUrl: tallerMilaImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://eltallerdemila.com/",
@@ -830,7 +862,12 @@ export const projectsData: ProjectsData = {
       description:
         "A sophisticated e-commerce site for custom jewelry, with product catalogs and Stripe payments. Built with React for a responsive frontend and Bootstrap for styling. Optimized for secure transactions, fast checkout, and cross-device compatibility.",
       tags: ["JavaScript", "React", "Stripe", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:stripe", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:stripe",
+        "logos:bootstrap",
+      ],
       imageUrl: prayJewelryImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://praywithmejewelry.com/",
@@ -840,7 +877,12 @@ export const projectsData: ProjectsData = {
       description:
         "A user-friendly water delivery service site with online ordering and subscriptions. Built with React for a responsive frontend and Node.js for order processing, with MongoDB for data storage. Optimized for convenience and efficient backend operations.",
       tags: ["JavaScript", "React", "Node.js", "MongoDB"],
-      icons: ["logos:javascript", "logos:react", "logos:nodejs", "logos:mongodb"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:nodejs",
+        "logos:mongodb",
+      ],
       imageUrl: myWaterImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://mywater.pk/",
@@ -852,7 +894,12 @@ export const projectsData: ProjectsData = {
       description:
         "A dynamic agency landing page offering custom digital solutions. Features a responsive design, interactive portfolio, and contact form. Built with React and Tailwind CSS, hosted on scalable cloud infrastructure for top-tier performance and engagement.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: achroWebImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://www.achrowebsolutions.com/",
@@ -862,7 +909,12 @@ export const projectsData: ProjectsData = {
       description:
         "A professional corporate landing page for a manufacturing firm, showcasing products and services. Built with React and Bootstrap for a responsive layout, with a CMS for content updates. Optimized for performance, SEO, and cross-browser compatibility.",
       tags: ["JavaScript", "React", "Bootstrap", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "logos:bootstrap", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:bootstrap",
+        "logos:nodejs",
+      ],
       imageUrl: guljagImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://guljag.surge.sh/",
@@ -872,7 +924,12 @@ export const projectsData: ProjectsData = {
       description:
         "A sleek digital agency landing page offering marketing and web services. Features client portfolios and inquiry forms. Built with React and Tailwind CSS for a modern design, with Node.js backend for requests, optimized for SEO and speed.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: mfsDigitalsImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://mfsdigitals.surge.sh/",
@@ -882,7 +939,12 @@ export const projectsData: ProjectsData = {
       description:
         "An inspiring non-profit landing page promoting community initiatives with event listings and donation forms. Built with React and Tailwind CSS for a modern design, with Firebase for real-time updates and secure data handling.",
       tags: ["JavaScript", "React", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: hopeBeliefImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://hopeandbelief.com/",
@@ -892,7 +954,12 @@ export const projectsData: ProjectsData = {
       description:
         "A holistic wellness landing page offering meditation and fitness resources with subscription plans. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Firebase for authentication and data storage.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: flogaImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://floga.in/",
@@ -904,7 +971,12 @@ export const projectsData: ProjectsData = {
       description:
         "A powerful admin dashboard for managing e-book content and user accounts. Built with React for a dynamic interface and Node.js with MongoDB for backend data management. Designed for efficient content curation and secure administrative operations.",
       tags: ["JavaScript", "React", "Node.js", "MongoDB"],
-      icons: ["logos:javascript", "logos:react", "logos:nodejs", "logos:mongodb"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:nodejs",
+        "logos:mongodb",
+      ],
       imageUrl: ebookAdminImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://ebook-admin.surge.sh/",
@@ -936,7 +1008,12 @@ export const projectsData: ProjectsData = {
       description:
         "A stunning portfolio site showcasing creative projects with dynamic galleries and fluid animations. Built with Next.js for server-side rendering, Tailwind CSS for styling, and Framer Motion for interactivity. Optimized for SEO and fast load times.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: azimuthImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://azimuth-verior.surge.sh/",
@@ -946,7 +1023,12 @@ export const projectsData: ProjectsData = {
       description:
         "A vibrant portfolio for a creative agency, featuring project showcases and testimonials. Built with React and Tailwind CSS for a modern UI. Hosted on Vercel for seamless deployment, with a focus on SEO and engaging user experiences.",
       tags: ["JavaScript", "React", "Tailwind", "Vercel"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:vercel"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:vercel",
+      ],
       imageUrl: samarImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://samar-creative.vercel.app/",
@@ -956,7 +1038,12 @@ export const projectsData: ProjectsData = {
       description:
         "A mockup portfolio site for testing creative designs and layouts. Features dynamic content and animations. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Framer Motion for smooth transitions, optimized for prototyping.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: veriorDummyImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://verior-dummy.surge.sh/",
@@ -966,7 +1053,12 @@ export const projectsData: ProjectsData = {
       description:
         "A visually stunning portfolio for digital art, with interactive displays and filters. Built with React and Tailwind CSS for a modern UI, with Firebase for real-time data, optimized for engagement and cross-device accessibility.",
       tags: ["JavaScript", "React", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: enviousWallImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://envious-wall.surge.sh/",
@@ -976,7 +1068,12 @@ export const projectsData: ProjectsData = {
       description:
         "A bold portfolio showcasing creative projects with interactive elements. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Framer Motion for animations. Optimized for SEO, fast load times, and immersive experiences.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: stormySpadeImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://stormy-spade.surge.sh/",
@@ -988,7 +1085,12 @@ export const projectsData: ProjectsData = {
       description:
         "An immersive online chess platform for players of all levels. Offers real-time multiplayer matches, leaderboards, and profiles. Built with React for a sleek frontend and Express.js with Socket.io for real-time gameplay, ensuring scalability.",
       tags: ["JavaScript", "React", "Express.js", "Socket.io"],
-      icons: ["logos:javascript", "logos:react", "logos:express", "logos:socketio"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:express",
+        "logos:socketio",
+      ],
       imageUrl: remotebase,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://weary-chess.surge.sh/",
@@ -998,7 +1100,12 @@ export const projectsData: ProjectsData = {
       description:
         "A cutting-edge NFT marketplace for trading digital collectibles on blockchain. Users can browse, buy, and sell assets with Web3.js for secure transactions. Built with React and Bootstrap for a responsive UI, optimized for high throughput.",
       tags: ["JavaScript", "React", "Web3.js", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:web3js", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:web3js",
+        "logos:bootstrap",
+      ],
       imageUrl: metaheroImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://metahero-2021.surge.sh/",
@@ -1008,7 +1115,12 @@ export const projectsData: ProjectsData = {
       description:
         "An innovative platform for designing and sharing custom sigils. Features an interactive editor and gallery. Built with React for a dynamic frontend and Firebase for real-time data, delivering a seamless and creative user experience.",
       tags: ["JavaScript", "React", "Firebase", "Tailwind"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "devicon:tailwindcss"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "devicon:tailwindcss",
+      ],
       imageUrl: sigilImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://my-sigil.surge.sh/",
@@ -1028,7 +1140,12 @@ export const projectsData: ProjectsData = {
       description:
         "A convenient app for booking dog walking services, with scheduling and payment features. Built with React and Tailwind CSS for a modern UI, hosted on Vercel for scalability. Integrated with Stripe for secure payments, optimized for convenience.",
       tags: ["JavaScript", "React", "Tailwind", "Stripe"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:stripe"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:stripe",
+      ],
       imageUrl: dogWalkerImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://testdogwalker.vercel.app/",
@@ -1038,7 +1155,12 @@ export const projectsData: ProjectsData = {
       description:
         "An experimental platform for showcasing innovative web projects. Features interactive demos and a sleek design. Built with React and Tailwind CSS for a modern UI, with Node.js for backend logic, optimized for performance and cross-browser compatibility.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: faintBrainImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "http://faint-brain.surge.sh/",
@@ -1048,7 +1170,12 @@ export const projectsData: ProjectsData = {
       description:
         "A motivational platform offering productivity tools and goal tracking. Built with React for a dynamic frontend and Firebase for real-time data and authentication. Designed for user engagement, cross-device compatibility, and seamless performance.",
       tags: ["JavaScript", "React", "Firebase", "Tailwind"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "devicon:tailwindcss"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "devicon:tailwindcss",
+      ],
       imageUrl: determinedBearImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://determined-bear.surge.sh/",
@@ -1060,7 +1187,12 @@ export const projectsData: ProjectsData = {
       description:
         "A lively blog platform for crypto enthusiasts, supporting user posts, comments, and social sharing. Built with Next.js for server-side rendering and MongoDB for data storage. Hosted on Vercel with a serverless backend for global accessibility.",
       tags: ["JavaScript", "Next.js", "MongoDB", "Vercel"],
-      icons: ["logos:javascript", "logos:nextjs", "logos:mongodb", "logos:vercel"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "logos:mongodb",
+        "logos:vercel",
+      ],
       imageUrl: degenImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://the-degen-diaries.vercel.app/",
@@ -1070,7 +1202,12 @@ export const projectsData: ProjectsData = {
       description:
         "A digital reading platform for e-books and articles, with a clean interface. Built with React for a responsive frontend and Firebase for user authentication and data storage. Optimized for seamless reading and cross-device compatibility.",
       tags: ["JavaScript", "React", "Firebase", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "logos:bootstrap",
+      ],
       imageUrl: lectoImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://lecto.surge.sh/",
@@ -1082,7 +1219,12 @@ export const projectsData: ProjectsData = {
       description:
         "A charming e-commerce platform for handmade crafts, featuring product listings, cart, and secure payments. Built with React and Stripe for seamless transactions, with Bootstrap for responsive design. Optimized for fast checkout and user-friendly navigation.",
       tags: ["JavaScript", "React", "Stripe", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:stripe", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:stripe",
+        "logos:bootstrap",
+      ],
       imageUrl: tallerMilaImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://eltallerdemila.com/",
@@ -1092,7 +1234,12 @@ export const projectsData: ProjectsData = {
       description:
         "A sophisticated e-commerce site for custom jewelry, with product catalogs and Stripe payments. Built with React for a responsive frontend and Bootstrap for styling. Optimized for secure transactions, fast checkout, and cross-device compatibility.",
       tags: ["JavaScript", "React", "Stripe", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:stripe", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:stripe",
+        "logos:bootstrap",
+      ],
       imageUrl: prayJewelryImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://praywithmejewelry.com/",
@@ -1102,7 +1249,12 @@ export const projectsData: ProjectsData = {
       description:
         "A user-friendly water delivery service site with online ordering and subscriptions. Built with React for a responsive frontend and Node.js for order processing, with MongoDB for data storage. Optimized for convenience and efficient backend operations.",
       tags: ["JavaScript", "React", "Node.js", "MongoDB"],
-      icons: ["logos:javascript", "logos:react", "logos:nodejs", "logos:mongodb"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:nodejs",
+        "logos:mongodb",
+      ],
       imageUrl: myWaterImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://mywater.pk/",
@@ -1112,7 +1264,12 @@ export const projectsData: ProjectsData = {
       description:
         "A dynamic agency landing page offering custom digital solutions. Features a responsive design, interactive portfolio, and contact form. Built with React and Tailwind CSS, hosted on scalable cloud infrastructure for top-tier performance and engagement.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: achroWebImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://www.achrowebsolutions.com/",
@@ -1122,7 +1279,12 @@ export const projectsData: ProjectsData = {
       description:
         "A professional corporate landing page for a manufacturing firm, showcasing products and services. Built with React and Bootstrap for a responsive layout, with a CMS for content updates. Optimized for performance, SEO, and cross-browser compatibility.",
       tags: ["JavaScript", "React", "Bootstrap", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "logos:bootstrap", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:bootstrap",
+        "logos:nodejs",
+      ],
       imageUrl: guljagImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://guljag.surge.sh/",
@@ -1132,7 +1294,12 @@ export const projectsData: ProjectsData = {
       description:
         "A sleek digital agency landing page offering marketing and web services. Features client portfolios and inquiry forms. Built with React and Tailwind CSS for a modern design, with Node.js backend for requests, optimized for SEO and speed.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: mfsDigitalsImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://mfsdigitals.surge.sh/",
@@ -1142,7 +1309,12 @@ export const projectsData: ProjectsData = {
       description:
         "An inspiring non-profit landing page promoting community initiatives with event listings and donation forms. Built with React and Tailwind CSS for a modern design, with Firebase for real-time updates and secure data handling.",
       tags: ["JavaScript", "React", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: hopeBeliefImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://hopeandbelief.com/",
@@ -1152,7 +1324,12 @@ export const projectsData: ProjectsData = {
       description:
         "A holistic wellness landing page offering meditation and fitness resources with subscription plans. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Firebase for authentication and data storage.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: flogaImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://floga.in/",
@@ -1162,7 +1339,12 @@ export const projectsData: ProjectsData = {
       description:
         "A powerful admin dashboard for managing e-book content and user accounts. Built with React for a dynamic interface and Node.js with MongoDB for backend data management. Designed for efficient content curation and secure administrative operations.",
       tags: ["JavaScript", "React", "Node.js", "MongoDB"],
-      icons: ["logos:javascript", "logos:react", "logos:nodejs", "logos:mongodb"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:nodejs",
+        "logos:mongodb",
+      ],
       imageUrl: ebookAdminImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://ebook-admin.surge.sh/",
@@ -1192,7 +1374,12 @@ export const projectsData: ProjectsData = {
       description:
         "A stunning portfolio site showcasing creative projects with dynamic galleries and fluid animations. Built with Next.js for server-side rendering, Tailwind CSS for styling, and Framer Motion for interactivity. Optimized for SEO and fast load times.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: azimuthImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://azimuth-verior.surge.sh/",
@@ -1202,7 +1389,12 @@ export const projectsData: ProjectsData = {
       description:
         "A vibrant portfolio for a creative agency, featuring project showcases and testimonials. Built with React and Tailwind CSS for a modern UI. Hosted on Vercel for seamless deployment, with a focus on SEO and engaging user experiences.",
       tags: ["JavaScript", "React", "Tailwind", "Vercel"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:vercel"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:vercel",
+      ],
       imageUrl: samarImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://samar-creative.vercel.app/",
@@ -1212,7 +1404,12 @@ export const projectsData: ProjectsData = {
       description:
         "A mockup portfolio site for testing creative designs and layouts. Features dynamic content and animations. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Framer Motion for smooth transitions, optimized for prototyping.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: veriorDummyImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://verior-dummy.surge.sh/",
@@ -1222,7 +1419,12 @@ export const projectsData: ProjectsData = {
       description:
         "A visually stunning portfolio for digital art, with interactive displays and filters. Built with React and Tailwind CSS for a modern UI, with Firebase for real-time data, optimized for engagement and cross-device accessibility.",
       tags: ["JavaScript", "React", "Tailwind", "Firebase"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:firebase"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:firebase",
+      ],
       imageUrl: enviousWallImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://envious-wall.surge.sh/",
@@ -1232,7 +1434,12 @@ export const projectsData: ProjectsData = {
       description:
         "A bold portfolio showcasing creative projects with interactive elements. Built with Next.js for server-side rendering and Tailwind CSS for styling, with Framer Motion for animations. Optimized for SEO, fast load times, and immersive experiences.",
       tags: ["JavaScript", "Next.js", "Tailwind", "Framer"],
-      icons: ["logos:javascript", "logos:nextjs", "devicon:tailwindcss", "logos:framer"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "devicon:tailwindcss",
+        "logos:framer",
+      ],
       imageUrl: stormySpadeImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://stormy-spade.surge.sh/",
@@ -1242,7 +1449,12 @@ export const projectsData: ProjectsData = {
       description:
         "An immersive online chess platform for players of all levels. Offers real-time multiplayer matches, leaderboards, and profiles. Built with React for a sleek frontend and Express.js with Socket.io for real-time gameplay, ensuring scalability.",
       tags: ["JavaScript", "React", "Express.js", "Socket.io"],
-      icons: ["logos:javascript", "logos:react", "logos:express", "logos:socketio"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:express",
+        "logos:socketio",
+      ],
       imageUrl: remotebase,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://weary-chess.surge.sh/",
@@ -1252,7 +1464,12 @@ export const projectsData: ProjectsData = {
       description:
         "A cutting-edge NFT marketplace for trading digital collectibles on blockchain. Users can browse, buy, and sell assets with Web3.js for secure transactions. Built with React and Bootstrap for a responsive UI, optimized for high throughput.",
       tags: ["JavaScript", "React", "Web3.js", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:web3js", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:web3js",
+        "logos:bootstrap",
+      ],
       imageUrl: metaheroImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://metahero-2021.surge.sh/",
@@ -1262,7 +1479,12 @@ export const projectsData: ProjectsData = {
       description:
         "An innovative platform for designing and sharing custom sigils. Features an interactive editor and gallery. Built with React for a dynamic frontend and Firebase for real-time data, delivering a seamless and creative user experience.",
       tags: ["JavaScript", "React", "Firebase", "Tailwind"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "devicon:tailwindcss"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "devicon:tailwindcss",
+      ],
       imageUrl: sigilImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://my-sigil.surge.sh/",
@@ -1282,7 +1504,12 @@ export const projectsData: ProjectsData = {
       description:
         "A convenient app for booking dog walking services, with scheduling and payment features. Built with React and Tailwind CSS for a modern UI, hosted on Vercel for scalability. Integrated with Stripe for secure payments, optimized for convenience.",
       tags: ["JavaScript", "React", "Tailwind", "Stripe"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:stripe"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:stripe",
+      ],
       imageUrl: dogWalkerImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://testdogwalker.vercel.app/",
@@ -1292,7 +1519,12 @@ export const projectsData: ProjectsData = {
       description:
         "An experimental platform for showcasing innovative web projects. Features interactive demos and a sleek design. Built with React and Tailwind CSS for a modern UI, with Node.js for backend logic, optimized for performance and cross-browser compatibility.",
       tags: ["JavaScript", "React", "Tailwind", "Node.js"],
-      icons: ["logos:javascript", "logos:react", "devicon:tailwindcss", "logos:nodejs"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "devicon:tailwindcss",
+        "logos:nodejs",
+      ],
       imageUrl: faintBrainImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "http://faint-brain.surge.sh/",
@@ -1302,7 +1534,12 @@ export const projectsData: ProjectsData = {
       description:
         "A lively blog platform for crypto enthusiasts, supporting user posts, comments, and social sharing. Built with Next.js for server-side rendering and MongoDB for data storage. Hosted on Vercel with a serverless backend for global accessibility.",
       tags: ["JavaScript", "Next.js", "MongoDB", "Vercel"],
-      icons: ["logos:javascript", "logos:nextjs", "logos:mongodb", "logos:vercel"],
+      icons: [
+        "logos:javascript",
+        "logos:nextjs",
+        "logos:mongodb",
+        "logos:vercel",
+      ],
       imageUrl: degenImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://the-degen-diaries.vercel.app/",
@@ -1312,7 +1549,12 @@ export const projectsData: ProjectsData = {
       description:
         "A digital reading platform for e-books and articles, with a clean interface. Built with React for a responsive frontend and Firebase for user authentication and data storage. Optimized for seamless reading and cross-device compatibility.",
       tags: ["JavaScript", "React", "Firebase", "Bootstrap"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "logos:bootstrap"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "logos:bootstrap",
+      ],
       imageUrl: lectoImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://lecto.surge.sh/",
@@ -1322,7 +1564,12 @@ export const projectsData: ProjectsData = {
       description:
         "A motivational platform offering productivity tools and goal tracking. Built with React for a dynamic frontend and Firebase for real-time data and authentication. Designed for user engagement, cross-device compatibility, and seamless performance.",
       tags: ["JavaScript", "React", "Firebase", "Tailwind"],
-      icons: ["logos:javascript", "logos:react", "logos:firebase", "devicon:tailwindcss"],
+      icons: [
+        "logos:javascript",
+        "logos:react",
+        "logos:firebase",
+        "devicon:tailwindcss",
+      ],
       imageUrl: determinedBearImg,
       githubLink: "https://github.com/bilalkhalidshaikh",
       urlLink: "https://determined-bear.surge.sh/",
@@ -1330,77 +1577,312 @@ export const projectsData: ProjectsData = {
   ],
 } as const;
 
+// export const skillsData = [
+//   {
+//     name: "TypeScript",
+//     icon: "logos:typescript-icon",
+//   },
+//   {
+//     name: "PHP",
+//     icon: "logos:php",
+//   },
+//   {
+//     name: "Laravel",
+//     icon: "logos:laravel",
+//   },
+//   {
+//     name: "React",
+//     icon: "logos:react",
+//   },
+//   {
+//     name: "GraphQL",
+//     icon: "logos:graphql",
+//   },
+//   {
+//     name: "Node.js",
+//     icon: "logos:nodejs-icon",
+//   },
+//   {
+//     name: "Symfony",
+//     icon: "logos:symfony",
+//   },
+//   {
+//     name: "Python",
+//     icon: "logos:python",
+//   },
+//   {
+//     name: "HTML",
+//     icon: "vscode-icons:file-type-html",
+//   },
+//   {
+//     name: "CSS",
+//     icon: "vscode-icons:file-type-css",
+//   },
+//   {
+//     name: "SCSS",
+//     icon: "logos:sass",
+//   },
+//   {
+//     name: "Git",
+//     icon: "logos:git-icon",
+//   },
+//   {
+//     name: "MySQL",
+//     icon: "logos:mysql",
+//   },
+//   {
+//     name: "PostgreSQL",
+//     icon: "logos:postgresql",
+//   },
+//   {
+//     name: "Linux",
+//     icon: "flat-color-icons:linux",
+//   },
+//   {
+//     name: "AWS",
+//     icon: "logos:aws",
+//   },
+//   {
+//     name: "Docker",
+//     icon: "logos:docker-icon",
+//   },
+//   {
+//     name: "Jenkins",
+//     icon: "devicon:jenkins",
+//   },
+// ] as const;
+
+// lib/data.ts
+
 export const skillsData = [
   {
     name: "TypeScript",
     icon: "logos:typescript-icon",
+    link: "https://www.typescriptlang.org/",
   },
   {
-    name: "PHP",
-    icon: "logos:php",
+    name: "JavaScript",
+    icon: "logos:javascript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
-    name: "Laravel",
-    icon: "logos:laravel",
+    name: "Next.js",
+    icon: "logos:nextjs-icon",
+    link: "https://nextjs.org/",
   },
   {
     name: "React",
     icon: "logos:react",
+    link: "https://reactjs.org/",
   },
   {
-    name: "GraphQL",
-    icon: "logos:graphql",
+    name: "Tailwind CSS",
+    icon: "logos:tailwindcss-icon",
+    link: "https://tailwindcss.com/",
+  },
+  {
+    name: "ShadCN/UI",
+    icon: "mdi:view-dashboard-outline",
+    link: "https://ui.shadcn.dev/",
   },
   {
     name: "Node.js",
     icon: "logos:nodejs-icon",
-  },
-  {
-    name: "Symfony",
-    icon: "logos:symfony",
+    link: "https://nodejs.org/",
   },
   {
     name: "Python",
     icon: "logos:python",
+    link: "https://www.python.org/",
   },
   {
-    name: "HTML",
-    icon: "vscode-icons:file-type-html",
+    name: "TensorFlow.js",
+    icon: "logos:tensorflow",
+    link: "https://www.tensorflow.org/js",
   },
   {
-    name: "CSS",
-    icon: "vscode-icons:file-type-css",
+    name: "LangChain",
+    icon: "mdi:link-variant",
+    link: "https://www.langchain.com/",
   },
   {
-    name: "SCSS",
-    icon: "logos:sass",
+    name: "Supabase",
+    icon: "logos:supabase-icon",
+    link: "https://supabase.com/",
   },
   {
-    name: "Git",
-    icon: "logos:git-icon",
+    name: "Firebase",
+    icon: "logos:firebase",
+    link: "https://firebase.google.com/",
   },
   {
-    name: "MySQL",
-    icon: "logos:mysql",
+    name: "MongoDB",
+    icon: "logos:mongodb-icon",
+    link: "https://www.mongodb.com/",
   },
   {
     name: "PostgreSQL",
     icon: "logos:postgresql",
+    link: "https://www.postgresql.org/",
   },
   {
-    name: "Linux",
-    icon: "flat-color-icons:linux",
+    name: "Prisma ORM",
+    icon: "logos:prisma",
+    link: "https://www.prisma.io/",
   },
   {
-    name: "AWS",
-    icon: "logos:aws",
+    name: "Express.js",
+    icon: "simple-icons:express",
+    link: "https://expressjs.com/",
+  },
+  {
+    name: "Deno",
+    icon: "simple-icons:deno",
+    link: "https://deno.com/",
+  },
+  {
+    name: "Pinecone",
+    icon: "mdi:pine-tree",
+    link: "https://www.pinecone.io/",
+  },
+  {
+    name: "Git",
+    icon: "logos:git-icon",
+    link: "https://git-scm.com/",
+  },
+  {
+    name: "GitHub",
+    icon: "logos:github-icon",
+    link: "https://github.com/",
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
+    link: "https://www.docker.com/",
   },
   {
-    name: "Jenkins",
-    icon: "devicon:jenkins",
+    name: "Linux",
+    icon: "logos:linux-tux",
+    link: "https://www.linux.org/",
+  },
+  {
+    name: "AWS",
+    icon: "logos:aws",
+    link: "https://aws.amazon.com/",
+  },
+  {
+    name: "Figma",
+    icon: "logos:figma",
+    link: "https://www.figma.com/",
+  },
+  {
+    name: "Framer Motion",
+    icon: "logos:framer",
+    link: "https://www.framer.com/motion/",
+  },
+  {
+    name: "OpenAI API",
+    icon: "logos:openai-icon",
+    link: "https://platform.openai.com/",
+  },
+  {
+    name: "LLM Agents",
+    icon: "mdi:robot-outline",
+    link: "https://github.com/topics/llm-agent",
+  },
+  {
+    name: "PWA",
+    icon: "simple-icons:pwa",
+    link: "https://web.dev/progressive-web-apps/",
+  },
+  {
+    name: "React Native",
+    icon: "logos:react",
+    link: "https://reactnative.dev/",
+  },
+  {
+    name: "Flutter",
+    icon: "logos:flutter",
+    link: "https://flutter.dev/",
+  },
+  {
+    name: "SQL",
+    icon: "mdi:database",
+    link: "https://www.w3schools.com/sql/",
+  },
+  {
+    name: "NoSQL",
+    icon: "mdi:database-outline",
+    link: "https://www.mongodb.com/nosql-explained",
+  },
+  {
+    name: "FastAPI",
+    icon: "simple-icons:fastapi",
+    link: "https://fastapi.tiangolo.com/",
+  },
+  {
+    name: "CrewAI",
+    icon: "mdi:account-group-outline",
+    link: "https://github.com/joaomdmoura/crewAI",
+  },
+  {
+    name: "AutoGen",
+    icon: "mdi:robot",
+    link: "https://microsoft.github.io/autogen/",
+  },
+  {
+    name: "LangGraph",
+    icon: "mdi:graph-outline",
+    link: "https://www.langgraph.dev/",
   },
 ] as const;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  export const educationData = [
+    {
+      institution: "GCUH",
+      degree: "Bachelor of Science in Computer Science",
+      date: "2022 – Ongoing",
+      description:
+        "Currently pursuing a rigorous computer science program with focus on algorithms, backend architecture, cloud-native development, and AI-first systems. Building real-world full-stack web and mobile applications using modern development stacks."
+    },
+    {
+      institution: "PANAVERSITY",
+      degree: "Certified Agentic & Robotic AI Engineer",
+      date: "2024 – Ongoing",
+      description:
+        "Hands-on training in autonomous AI systems using LangChain, AutoGen, RAG, and memory-based agent frameworks. Specialized in robotic cognition, LLM orchestration, and scalable multi-agent infrastructures integrating business logic and sensor control."
+    },
+    {
+      institution: "PIAIC",
+      degree: "Web & Mobile Hybrid Application Developer",
+      date: "2020 – 2023",
+      description:
+        "Completed intensive training in full-stack web and mobile development using React Native, Next.js, Node.js, and cloud databases. Delivered hybrid applications with real-time features, API integration, and production-level UI/UX."
+    },
+    {
+      institution: "Microsoft & LinkedIn Learning",
+      degree: "Certified Software Engineer",
+      date: "2019 – 2021",
+      description:
+        "Studied software development lifecycle, clean architecture, agile workflows, and system design. Gained experience in API-first development, scalable backend systems, testing frameworks, and collaborative DevOps practices."
+    },
+    {
+      institution: "Google Learning Academy",
+      degree: "Certified Full-Stack Developer",
+      date: "2018 – 2019",
+      description:
+        "Trained in full-stack engineering with frontend (HTML, CSS, JavaScript) and backend (Node.js, Firebase) foundations. Specialized in building responsive interfaces, secure cloud-integrated apps, and scalable real-time database-driven systems."
+    }
+  ];

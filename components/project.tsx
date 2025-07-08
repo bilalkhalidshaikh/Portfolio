@@ -110,25 +110,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // "use client";
 
 // import { useRef } from "react";
@@ -267,7 +248,7 @@
 //           />
 //         </section>
 //       </motion.div>
-      
+
 // <style jsx>{`
 //   @keyframes neonBorder {
 //     0% {
@@ -327,19 +308,6 @@
 //     </Tilt>
 //   );
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 "use client";
 
@@ -422,7 +390,7 @@ export default function Project({
     setIsSpeechEnabled(!isSpeechEnabled);
     speechSynthesis.cancel();
     try {
-      new Audio("/sounds/click.mp3").play();
+      new Audio("/sounds/click.wav").play();
     } catch (error) {
       console.warn("Audio playback failed:", error);
     }
@@ -431,7 +399,7 @@ export default function Project({
   const handleVoiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedVoice(e.target.value);
     try {
-      new Audio("/sounds/click.mp3").play();
+      new Audio("/sounds/click.wav").play();
     } catch (error) {
       console.warn("Audio playback failed:", error);
     }
@@ -441,7 +409,7 @@ export default function Project({
     if (urlLink) {
       window.open(urlLink, "_blank", "noopener,noreferrer");
       try {
-        new Audio("/sounds/click.mp3").play();
+        new Audio("/sounds/click.wav").play();
       } catch (error) {
         console.warn("Audio playback failed:", error);
       }
@@ -450,7 +418,12 @@ export default function Project({
 
   return (
     <>
-      <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} glareEnable glareMaxOpacity={0.7}>
+      <Tilt
+        tiltMaxAngleX={25}
+        tiltMaxAngleY={25}
+        glareEnable
+        glareMaxOpacity={0.7}
+      >
         <motion.div
           ref={ref}
           style={{
@@ -466,7 +439,7 @@ export default function Project({
           transition={{ duration: 0.4 }}
           onHoverStart={() => {
             try {
-              new Audio("/sounds/hover.mp3").play();
+              new Audio("/sounds/hover.wav").play();
             } catch (error) {
               console.warn("Audio playback failed:", error);
             }
@@ -531,7 +504,7 @@ export default function Project({
                     whileTap={{ scale: 0.9 }}
                     onClick={() => {
                       try {
-                        new Audio("/sounds/click.mp3").play();
+                        new Audio("/sounds/click.wav").play();
                       } catch (error) {
                         console.warn("Audio playback failed:", error);
                       }
@@ -551,7 +524,7 @@ export default function Project({
                     whileTap={{ scale: 0.9 }}
                     onClick={() => {
                       try {
-                        new Audio("/sounds/click.mp3").play();
+                        new Audio("/sounds/click.wav").play();
                       } catch (error) {
                         console.warn("Audio playback failed:", error);
                       }
@@ -571,7 +544,7 @@ export default function Project({
                     whileTap={{ scale: 0.9 }}
                     onClick={() => {
                       try {
-                        new Audio("/sounds/click.mp3").play();
+                        new Audio("/sounds/click.wav").play();
                       } catch (error) {
                         console.warn("Audio playback failed:", error);
                       }
@@ -620,14 +593,14 @@ export default function Project({
                 onClick={() => {
                   setIsModalOpen(true);
                   try {
-                    new Audio("/sounds/click.mp3").play();
+                    new Audio("/sounds/click.wav").play();
                   } catch (error) {
                     console.warn("Audio playback failed:", error);
                   }
                 }}
                 onHoverStart={() => {
                   try {
-                    new Audio("/sounds/hover.mp3").play();
+                    new Audio("/sounds/hover.wav").play();
                   } catch (error) {
                     console.warn("Audio playback failed:", error);
                   }

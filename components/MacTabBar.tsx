@@ -15,19 +15,19 @@ export default function MacTabBar() {
           className="w-3 h-3 rounded-full bg-red-500"
           whileHover={{ scale: 1.3, rotate: 45 }}
           whileTap={{ scale: 0.8 }}
-          onClick={() => new Audio("/sounds/click.mp3").play()}
+          onClick={() => new Audio("/sounds/click.wav").play()}
         />
         <motion.div
           className="w-3 h-3 rounded-full bg-yellow-500"
           whileHover={{ scale: 1.3, rotate: 45 }}
           whileTap={{ scale: 0.8 }}
-          onClick={() => new Audio("/sounds/click.mp3").play()}
+          onClick={() => new Audio("/sounds/click.wav").play()}
         />
         <motion.div
           className="w-3 h-3 rounded-full bg-green-500"
           whileHover={{ scale: 1.3, rotate: 45 }}
           whileTap={{ scale: 0.8 }}
-          onClick={() => new Audio("/sounds/click.mp3").play()}
+          onClick={() => new Audio("/sounds/click.wav").play()}
         />
       </div>
       <style jsx>{`

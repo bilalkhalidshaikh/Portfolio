@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { Nunito } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeSwitch from "@/components/theme-switch";
@@ -9,9 +10,10 @@ import "./globals.css";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ben Rogers | Software Engineer",
-  description: "Software engineer at Humanforce.",
+  title: "Muhammad Bilal Khalid | Full-Stack AI Developer",
+  description: "Full-stack developer building AI-powered digital empires.",
 };
+
 
 export default function RootLayout({
   children,
@@ -30,6 +32,7 @@ export default function RootLayout({
 
             <Toaster position="top-right" />
             <ThemeSwitch />
+            <Footer/>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
