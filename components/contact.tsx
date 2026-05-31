@@ -308,8 +308,6 @@
 // }
 
 
-
-
 "use client";
 
 import React, { useState } from "react";
@@ -343,11 +341,11 @@ export default function Contact() {
  <section
       id="contact"
       ref={ref}
-      // REMOVED min-h-[600px] AND mb-32 sm:mb-48. ADDED overflow-hidden
-      className="relative z-10 w-full pb-16 sm:pb-24 scroll-mt-28 overflow-hidden"
+      // Added global padding constraints to lock the viewport width
+      className="relative z-10 w-full max-w-[75rem] mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-24 scroll-mt-28 overflow-hidden sm:overflow-visible"
     >
-      {/* Muted Stealth Background Glow - Now perfectly contained */}
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-zinc-900/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+      {/* Muted Stealth Background Glow - Scaled and centered for mobile */}
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[300px] sm:w-[800px] h-[300px] sm:h-[800px] bg-zinc-900/10 rounded-full blur-[80px] sm:blur-[150px] pointer-events-none mix-blend-screen" />
 
       {/* The iOS Drill-down Container */}
       <div className="relative w-full overflow-hidden">
@@ -361,44 +359,45 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50, filter: "blur(10px)" }}
               transition={{ duration: 0.6, ease: iosEasing }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start w-full"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start w-full"
             >
               {/* Left Side: The Hook */}
-              <div className="lg:col-span-7 flex flex-col items-start pt-4">
-                <div className="flex items-center gap-3 text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-6">
-                  <span className="w-2 h-2 rounded-full bg-zinc-500 animate-pulse" /> SECURE CHANNEL
+              <div className="lg:col-span-7 flex flex-col items-start pt-2 sm:pt-4">
+                <div className="flex items-center gap-2 sm:gap-3 text-zinc-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-4 sm:mb-6">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-zinc-500 animate-pulse flex-shrink-0" /> SECURE CHANNEL
                 </div>
                 
-                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 sm:mb-6 leading-[1.1]">
                   Let's architect <br />
                   <span className="text-zinc-600">autonomous scale.</span>
                 </h2>
                 
-                <p className="text-zinc-400 text-lg lg:text-xl font-light leading-relaxed max-w-2xl mb-12">
+                <p className="text-zinc-400 text-base sm:text-lg lg:text-xl font-light leading-relaxed max-w-2xl mb-8 sm:mb-12">
                   Available for enterprise-grade deployments, deterministic AI workflow orchestration, and high-level architectural consulting.
                 </p>
 
                 <button
                   onClick={() => setActiveView('form')}
-                  className="group flex items-center gap-4 bg-white text-black px-8 py-5 rounded-full font-bold tracking-wide hover:bg-zinc-200 transition-colors duration-500"
+                  // Scaled padding and typography for CTA button
+                  className="group flex items-center gap-3 sm:gap-4 bg-white text-black px-6 sm:px-8 py-4 sm:py-5 rounded-full text-sm sm:text-base font-bold tracking-wide hover:bg-zinc-200 transition-colors duration-500"
                 >
                   Initiative Protocol
-                  <BsArrowRight className="text-xl group-hover:translate-x-2 transition-transform duration-500" />
+                  <BsArrowRight className="text-lg sm:text-xl group-hover:translate-x-2 transition-transform duration-500" />
                 </button>
 
-                {/* Minimalist Social Row */}
-                <div className="flex items-center gap-8 mt-24 border-t border-white/5 pt-8 w-full max-w-md">
+                {/* Minimalist Social Row - Tighter margin on mobile */}
+                <div className="flex items-center gap-6 sm:gap-8 mt-16 sm:mt-24 border-t border-white/5 pt-6 sm:pt-8 w-full max-w-md">
                   <a href="https://www.linkedin.com/in/bilalkhalidshaikh/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-300">
-                    <BsLinkedin className="text-2xl" />
+                    <BsLinkedin className="text-xl sm:text-2xl" />
                   </a>
                   <a href="https://github.com/bilalkhalidshaikh/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-300">
-                    <BsGithub className="text-2xl" />
+                    <BsGithub className="text-xl sm:text-2xl" />
                   </a>
                   <a href="https://x.com/bilalkhalid29" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-300">
-                    <BsTwitterX className="text-2xl" />
+                    <BsTwitterX className="text-xl sm:text-2xl" />
                   </a>
                   <a href="https://substack.com/@bilalkhalid29" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-white transition-colors duration-300">
-                    <SiSubstack className="text-2xl" />
+                    <SiSubstack className="text-xl sm:text-2xl" />
                   </a>
                 </div>
               </div>
@@ -442,62 +441,63 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.6, ease: iosEasing }}
-              className="flex flex-col w-full bg-[#030303] border border-white/5 p-8 sm:p-12 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.8)]"
+              // Scaled padding and border radiuses for the form container
+              className="flex flex-col w-full bg-[#030303] border border-white/5 p-6 sm:p-12 lg:p-16 rounded-3xl sm:rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.8)]"
             >
               <button 
                 onClick={() => setActiveView('cta')}
-                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors mb-12 font-mono text-sm tracking-widest uppercase w-fit"
+                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors mb-8 sm:mb-12 font-mono text-xs sm:text-sm tracking-[0.2em] sm:tracking-widest uppercase w-fit"
               >
-                <BsArrowLeft className="text-lg" /> Abort
+                <BsArrowLeft className="text-base sm:text-lg" /> Abort
               </button>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20">
                 <div className="lg:col-span-7">
-                  <h3 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-3">
+                  <h3 className="text-3xl sm:text-5xl font-bold text-white tracking-tight mb-2 sm:mb-3">
                     Project Specs.
                   </h3>
-                  <p className="text-zinc-500 font-light mb-12">Submit the parameters of your deployment.</p>
+                  <p className="text-zinc-500 font-light mb-8 sm:mb-12 text-sm sm:text-base">Submit the parameters of your deployment.</p>
 
-                  <form className="flex flex-col gap-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <form className="flex flex-col gap-8 sm:gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
                       <div className="flex flex-col relative group">
-                        <label className="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Name *</label>
+                        <label className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Name *</label>
                         <input 
                           type="text" 
                           placeholder="John Doe"
-                          className="bg-transparent border-b border-white/10 py-3 text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
+                          className="bg-transparent border-b border-white/10 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
                           required
                         />
                       </div>
                       <div className="flex flex-col relative group">
-                        <label className="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Email *</label>
+                        <label className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Email *</label>
                         <input 
                           type="type" 
                           placeholder="john@enterprise.com"
-                          className="bg-transparent border-b border-white/10 py-3 text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
+                          className="bg-transparent border-b border-white/10 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="flex flex-col relative group">
-                      <label className="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Company / Organization</label>
+                      <label className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Company / Organization</label>
                       <input 
                         type="text" 
                         placeholder="Your company website or name"
-                        className="bg-transparent border-b border-white/10 py-3 text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
+                        className="bg-transparent border-b border-white/10 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300"
                       />
                     </div>
 
                     <div className="flex flex-col mt-2">
-                      <label className="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-4">Core Requirement</label>
-                      <div className="flex flex-wrap gap-3">
+                      <label className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zinc-600 mb-3 sm:mb-4">Core Requirement</label>
+                      <div className="flex flex-wrap gap-2 sm:gap-3">
                         {services.map((service) => (
                           <button
                             key={service}
                             type="button"
                             onClick={() => setSelectedService(service)}
-                            className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 border ${
+                            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-sm transition-all duration-300 border ${
                               selectedService === service 
                                 ? "bg-white text-black border-white" 
                                 : "bg-transparent border-white/10 text-zinc-500 hover:border-white/30 hover:text-white"
@@ -510,18 +510,19 @@ export default function Contact() {
                     </div>
 
                     <div className="flex flex-col relative group mt-2">
-                      <label className="text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Architectural Brief</label>
+                      <label className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zinc-600 mb-2">Architectural Brief</label>
                       <textarea 
                         placeholder="Describe your infrastructure needs, scale, and timeline..."
                         rows={3}
-                        className="bg-transparent border-b border-white/10 py-3 text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300 resize-none"
+                        className="bg-transparent border-b border-white/10 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white/[0.02] px-2 transition-all duration-300 resize-none"
                         required
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="mt-6 w-full sm:w-auto self-end bg-white text-black px-12 py-5 rounded-full font-bold tracking-wide hover:bg-zinc-300 transition-colors duration-500 flex items-center justify-center gap-3"
+                      // Button scales to full width on mobile for better touch targets
+                      className="mt-4 sm:mt-6 w-full sm:w-auto self-end bg-white text-black px-8 sm:px-12 py-4 sm:py-5 rounded-full text-sm sm:text-base font-bold tracking-wide hover:bg-zinc-300 transition-colors duration-500 flex items-center justify-center gap-3"
                     >
                       Transmit Data
                       <BsArrowRight className="text-lg" />

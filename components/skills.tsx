@@ -175,8 +175,6 @@
 
 
 
-
-
 "use client";
 
 import React from "react";
@@ -213,13 +211,12 @@ function SkillCard({ skill, index }: { skill: any; index: number }) {
       whileHover={{ y: -5, scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onMouseMove={handleMouseMove}
-      className="group relative flex flex-col items-center justify-center p-6 bg-[#111111]/40 border border-white/5 rounded-2xl cursor-pointer overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-colors duration-500 hover:border-cyan-500/30"
+      // RESPONSIVE FIX: Scaled down paddings for mobile grids
+      className="group relative flex flex-col items-center justify-center p-3 sm:p-6 bg-[#111111]/40 border border-white/5 rounded-2xl cursor-pointer overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-colors duration-500 hover:border-cyan-500/30"
     >
-      {/* The Magic Sauce: Dynamic Mouse-Tracking Spotlight 
-        This is what $240k frontend architects build.
-      */}
+      {/* The Magic Sauce: Dynamic Mouse-Tracking Spotlight */}
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100 hidden sm:block"
         style={{
           background: useMotionTemplate`
             radial-gradient(
@@ -233,12 +230,14 @@ function SkillCard({ skill, index }: { skill: any; index: number }) {
 
       {/* Icon with 3D Float Effect on Hover */}
       <motion.div 
-        className="relative z-10 mb-4 text-gray-400 group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.05)] group-hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.6)]"
+        // RESPONSIVE FIX: Scaled icons to prevent blowout on small grids
+        className="relative z-10 mb-2 sm:mb-4 text-gray-400 group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.05)] group-hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.6)]"
       >
-        <Icon icon={skill.icon} className="text-4xl sm:text-5xl" />
+        <Icon icon={skill.icon} className="text-3xl sm:text-4xl lg:text-5xl" />
       </motion.div>
       
-      <span className="relative z-10 text-xs sm:text-sm font-mono tracking-widest text-gray-500 group-hover:text-cyan-300 transition-colors duration-300 text-center uppercase font-bold">
+      {/* RESPONSIVE FIX: Ultra-tight tracking and text sizes for mobile */}
+      <span className="relative z-10 text-[9px] sm:text-[10px] lg:text-xs font-mono tracking-wide sm:tracking-widest text-gray-500 group-hover:text-cyan-300 transition-colors duration-300 text-center uppercase font-bold px-1">
         {skill.name}
       </span>
     </motion.div>
@@ -255,26 +254,27 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="relative z-10 w-full mb-28 sm:mb-40 scroll-mt-28"
+      // RESPONSIVE FIX: Added px constraints to lock viewport width
+      className="relative z-10 w-full mb-20 sm:mb-40 scroll-mt-28 px-4 sm:px-8 md:px-16 overflow-hidden sm:overflow-visible"
     >
-      {/* Premium Ambient Background Glows */}
-      <div className="absolute top-[20%] left-[-10%] w-[800px] h-[800px] bg-cyan-900/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+      {/* Premium Ambient Background Glows - Scaled for mobile */}
+      <div className="absolute top-[20%] left-[50%] -translate-x-1/2 sm:translate-x-0 sm:left-[-10%] w-[300px] sm:w-[800px] h-[300px] sm:h-[800px] bg-cyan-900/10 rounded-full blur-[80px] sm:blur-[150px] pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-[-10%] right-[50%] translate-x-1/2 sm:translate-x-0 sm:right-[-10%] w-[300px] sm:w-[800px] h-[300px] sm:h-[800px] bg-blue-900/10 rounded-full blur-[80px] sm:blur-[150px] pointer-events-none mix-blend-screen" />
 
       {/* Header */}
-      <div className="text-center mb-20 relative z-10">
-        <div className="flex items-center justify-center gap-3 text-cyan-500 font-mono text-xs uppercase tracking-[0.3em] mb-4">
-          <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" /> TECHNICAL ARSENAL
+      <div className="text-center mb-12 sm:mb-20 relative z-10">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 text-cyan-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-4">
+          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-cyan-500 animate-pulse" /> TECHNICAL ARSENAL
         </div>
         <SectionHeading>Engineering Stack</SectionHeading>
-        <p className="text-gray-400 mt-4 text-lg font-light max-w-2xl mx-auto">
+        <p className="text-gray-400 mt-4 text-sm sm:text-base lg:text-lg font-light max-w-2xl mx-auto px-2 sm:px-0 leading-relaxed">
           The core frameworks, execution languages, and orchestration primitives utilized to engineer 
           high-concurrency distributed systems.
         </p>
       </div>
 
       {/* Architecture Domain Grouping */}
-      <div className="flex flex-col gap-16 max-w-[70rem] mx-auto relative z-10">
+      <div className="flex flex-col gap-8 sm:gap-16 max-w-[70rem] mx-auto relative z-10">
         {skillsData.map((categoryGroup, groupIndex) => (
           <motion.div 
             key={categoryGroup.category}
@@ -282,19 +282,21 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: groupIndex * 0.1 }}
-            className="w-full bg-[#050505]/60 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] p-8 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden"
+            // RESPONSIVE FIX: Scaled block paddings and border radiuses
+            className="w-full bg-[#050505]/60 backdrop-blur-3xl border border-white/5 rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden"
           >
-            {/* Inner Domain Glow */}
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-cyan-500/[0.02] rounded-full blur-[100px] pointer-events-none" />
+            {/* Inner Domain Glow - Scaled for mobile */}
+            <div className="absolute top-0 right-0 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-cyan-500/[0.02] rounded-full blur-[60px] sm:blur-[100px] pointer-events-none" />
 
-            <div className="flex items-center gap-4 mb-10 border-b border-white/5 pb-6">
-              <span className="text-cyan-500 font-mono text-sm">{`0${groupIndex + 1}`}</span>
-              <h3 className="text-sm sm:text-base font-mono tracking-[0.25em] text-gray-300 uppercase font-bold">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-10 border-b border-white/5 pb-4 sm:pb-6">
+              <span className="text-cyan-500 font-mono text-xs sm:text-sm">{`0${groupIndex + 1}`}</span>
+              <h3 className="text-xs sm:text-sm lg:text-base font-mono tracking-[0.2em] sm:tracking-[0.25em] text-gray-300 uppercase font-bold">
                 {categoryGroup.category}
               </h3>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+            {/* RESPONSIVE FIX: Tighter grids on mobile (cols-2 scaling to cols-3, then up) */}
+            <div className="grid grid-cols-2 min-[400px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
               {categoryGroup.skills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
               ))}
