@@ -1,89 +1,327 @@
+# Muhammad Bilal Khalid
 
+<div align="center">
 
----
+# AI Engineer • Full-Stack Developer • Distributed Systems Builder
 
-```markdown
-# Muhammad Bilal Khalid // Principal AI Architect
+Building AI-native products, agentic systems, cloud infrastructure, and scalable software architectures.
 
-[![Live Deployment](https://img.shields.io/badge/Live_Environment-%23000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bilalkhalidshaikh.vercel.app/)
-[![Secure Comm Link](https://img.shields.io/badge/Secure_Channel-%23050505?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:bilalkhalid.dev@outlook.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-black?style=for-the-badge\&logo=vercel)](https://bilalkhalidshaikh.vercel.app)
+[![Email](https://img.shields.io/badge/Email-Contact-black?style=for-the-badge\&logo=microsoftoutlook)](mailto:bilalkhalid.dev@outlook.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Projects-black?style=for-the-badge\&logo=github)](https://github.com/bilalkhalidshaikh)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Network-black?style=for-the-badge\&logo=linkedin)](https://linkedin.com/in/bilalkhalidshaikh)
 
----
-
-## 🗄️ System Overview
-
-I am **Muhammad Bilal Khalid**, a Principal AI Architect and Distributed Systems Engineer. 
-
-This repository contains the source code for my digital operating environment—a demonstration of high-throughput frontend architecture, deterministic UI states, and enterprise-grade aesthetic design. It serves as the primary gateway for my architectural deployments, agentic AI case studies, and operational telemetry.
-
-I build enterprise-grade agentic AI pipelines and deterministic workflow orchestration systems, specializing in Python, React, and scalable cloud-native infrastructure.
+</div>
 
 ---
 
-## ⚙️ V2 Architecture Updates (Latest Deployment)
+## About
 
-The current `refactor-portfolio` branch introduces a complete teardown and rebuild of the frontend infrastructure, shifting to a brutalist, high-contrast, stealth-mode UI.
+Software engineer specializing in:
 
-* **[SYS_01] Neural Twin Integration:** Deployed a client-side simulated RAG (Retrieval-Augmented Generation) terminal (`rag-terminal.tsx`) with Apple-style spring physics.
-* **[SYS_02] Glassmorphic Telemetry Navigation:** Re-architected the routing layer into an iOS-styled dynamic capsule with elite vocabulary mapping (`Core`, `Infrastructure`, `Operations`, `Arsenal`).
-* **[SYS_03] Asynchronous Load Rendering:** Rebuilt project casing and timeline components using Framer Motion layout IDs for deep-dive architectural expansion.
-* **[SYS_04] Stealth Mode Enforcement:** Eradicated standard light/dark toggles in favor of a strictly enforced, high-contrast `#050505` monolithic environment.
+* Agentic AI Systems
+* Multi-Agent Orchestration
+* Retrieval-Augmented Generation (RAG)
+* Distributed Systems
+* Cloud Infrastructure
+* Full-Stack Product Development
+* Workflow Automation
+* AI-Powered Applications
 
----
+My work focuses on building production-grade systems that combine modern software engineering with large language model infrastructure, scalable backend services, and exceptional user experiences.
 
-## 🧩 Core Infrastructure Stack
-
-| Operational Domain | Technology Matrix |
-| :--- | :--- |
-| **Frontend Architecture** | React, Next.js, TypeScript, Tailwind CSS, Framer Motion, Shadcn/ui |
-| **Backend & Microservices** | Node.js, FastAPI, Prisma, Serverless Actions |
-| **Agentic AI & Swarms** | LangGraph, CrewAI, AutoGen, OpenAI, Multi-Agent Orchestration |
-| **Data & Vector Storage** | Neo4j, Qdrant, Pinecone, PostgreSQL, Redis |
-| **Cloud & Deployment** | Vercel, AWS ECS, Docker, GitHub Actions CI/CD |
-| **Distributed Systems** | Kafka, RabbitMQ, WebSockets, gRPC, Asynchronous Python |
+This repository contains the source code for my personal portfolio, engineering experiments, AI demonstrations, and technical showcases.
 
 ---
 
-## 🚀 Local Initialization Protocol
+## Engineering Focus
 
-To spin up this environment locally for code review or architectural auditing:
+| Domain               | Expertise                                 |
+| -------------------- | ----------------------------------------- |
+| AI Systems           | RAG, Agents, Tool Calling, Memory Systems |
+| Frontend Engineering | React, Next.js, TypeScript                |
+| Backend Engineering  | FastAPI, Node.js, APIs                    |
+| Infrastructure       | AWS, Docker, CI/CD                        |
+| Data Systems         | PostgreSQL, Redis, Neo4j                  |
+| Vector Search        | Pinecone, Qdrant                          |
+| Distributed Systems  | Kafka, RabbitMQ, WebSockets               |
+
+---
+
+## Core Technology Stack
+
+### Languages
+
+```text
+Python
+TypeScript
+JavaScript
+SQL
+```
+
+### Frontend
+
+```text
+React
+Next.js
+TypeScript
+Tailwind CSS
+Framer Motion
+shadcn/ui
+```
+
+### Backend
+
+```text
+Node.js
+FastAPI
+Express
+Prisma
+REST APIs
+Serverless Functions
+```
+
+### AI Engineering
+
+```text
+OpenAI
+LangGraph
+CrewAI
+AutoGen
+RAG Pipelines
+Prompt Engineering
+Multi-Agent Systems
+Workflow Automation
+```
+
+### Data Layer
+
+```text
+PostgreSQL
+Redis
+Neo4j
+Pinecone
+Qdrant
+```
+
+### Infrastructure
+
+```text
+AWS
+Docker
+GitHub Actions
+Vercel
+CI/CD Pipelines
+Cloud-Native Deployment
+```
+
+---
+
+## Portfolio Architecture
+
+```mermaid
+flowchart LR
+
+A[Client]
+--> B[Next.js Frontend]
+
+B --> C[API Layer]
+
+C --> D[AI Services]
+
+D --> E[OpenAI APIs]
+D --> F[LangGraph]
+D --> G[CrewAI]
+
+C --> H[PostgreSQL]
+C --> I[Redis]
+C --> J[Vector Database]
+
+K[GitHub Actions]
+--> L[CI/CD]
+
+L --> M[Vercel]
+L --> N[AWS Infrastructure]
+```
+
+---
+
+## AI Engineering Workflow
+
+```mermaid
+flowchart TD
+
+A[User Request]
+--> B[Prompt Processing]
+
+B --> C[Agent Router]
+
+C --> D[Tools]
+
+D --> E[Knowledge Base]
+
+E --> F[Vector Search]
+
+F --> G[LLM Response]
+
+G --> H[Output]
+```
+
+---
+
+## Development Lifecycle
+
+```mermaid
+flowchart TD
+
+A[Planning]
+--> B[Architecture]
+
+B --> C[Development]
+
+C --> D[Testing]
+
+D --> E[CI Pipeline]
+
+E --> F[Deployment]
+
+F --> G[Monitoring]
+
+G --> H[Optimization]
+```
+
+---
+
+## Technical Interests
+
+* Agentic AI
+* AI Infrastructure
+* Autonomous Workflows
+* Distributed Computing
+* Cloud-Native Systems
+* Large Language Models
+* Vector Databases
+* Event-Driven Architecture
+* System Design
+* Developer Tooling
+
+---
+
+## Engineering Principles
+
+| Principle   | Description                            |
+| ----------- | -------------------------------------- |
+| Simplicity  | Build maintainable systems             |
+| Scalability | Design for growth from day one         |
+| Reliability | Production-grade engineering standards |
+| Automation  | Remove repetitive processes            |
+| Performance | Optimize critical paths                |
+| Ownership   | End-to-end accountability              |
+
+---
+
+## Skills Matrix
+
+| Category       | Technologies                        |
+| -------------- | ----------------------------------- |
+| Languages      | Python, TypeScript, JavaScript, SQL |
+| Frontend       | React, Next.js, Tailwind            |
+| Backend        | Node.js, FastAPI, Express           |
+| AI             | OpenAI, LangGraph, CrewAI, AutoGen  |
+| Databases      | PostgreSQL, Redis, Neo4j            |
+| Vector Search  | Pinecone, Qdrant                    |
+| Infrastructure | Docker, AWS, Vercel                 |
+| DevOps         | GitHub Actions, CI/CD               |
+| Messaging      | Kafka, RabbitMQ                     |
+| Realtime       | WebSockets, Streaming APIs          |
+
+---
+
+## Featured Capabilities
+
+### AI Systems
+
+* Retrieval-Augmented Generation (RAG)
+* Agentic Workflows
+* Multi-Agent Coordination
+* Tool Calling
+* Memory Architectures
+* Knowledge Systems
+
+### Software Engineering
+
+* Full-Stack Development
+* API Design
+* System Architecture
+* Cloud Infrastructure
+* Distributed Systems
+* Performance Optimization
+
+### Product Engineering
+
+* Rapid Prototyping
+* MVP Development
+* SaaS Platforms
+* AI Applications
+* Internal Tools
+* Automation Systems
+
+---
+
+## Local Development
+
+Clone and run locally:
 
 ```bash
-# 1. Clone the repository
-git clone [https://github.com/bilalkhalidshaikh/portfolio.git](https://github.com/bilalkhalidshaikh/portfolio.git)
+git clone https://github.com/bilalkhalidshaikh/portfolio.git
 
-# 2. Navigate to the directory
 cd portfolio
 
-# 3. Install core dependencies
 npm install
 
-# 4. Initialize the local development server
 npm run dev
-
 ```
 
-Navigate to `http://localhost:3000` to view the deployment.
+Open:
+
+```text
+http://localhost:3000
+```
 
 ---
 
-## 📡 Operational Telemetry & Engagement
+## GitHub Analytics
 
-I am available for enterprise-grade contract deployments, deterministic AI workflow orchestration, and high-level architectural consulting.
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bilalkhalidshaikh\&show_icons=true)
 
-**Engagement Protocols:**
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bilalkhalidshaikh\&layout=compact)
 
-* **Asynchronous First:** Initial scoping and architectural reviews are conducted asynchronously.
-* **Project Scope:** I specialize in building net-new infrastructure, agentic pipelines, and rescuing failing backend systems. I do not take on routine legacy maintenance.
-
-**Initiate Protocol:**
-
-* **Email:** [bilalkhalid.dev@outlook.com]()
-* **LinkedIn:** [Executive Profile](https://www.google.com/search?q=https://www.linkedin.com/in/bilalkhalidshaikh/)
-* **X.com:** [Live Updates](https://www.google.com/search?q=https://twitter.com/bilalkhalid29/)
+![GitHub Streak](https://streak-stats.demolab.com?user=bilalkhalidshaikh)
 
 ---
 
-*Built by Muhammad Bilal Khalid. All rights reserved.*
+## Current Focus
 
+```text
+AI Infrastructure
+Agentic Systems
+RAG Architectures
+Workflow Automation
+Cloud-Native Applications
+Distributed Systems
+Full-Stack Engineering
 ```
+
+---
+
+## Connect
+
+* Portfolio → https://bilalkhalidshaikh.vercel.app
+* GitHub → https://github.com/bilalkhalidshaikh
+* LinkedIn → https://linkedin.com/in/bilalkhalidshaikh
+* X → https://twitter.com/bilalkhalid29
+* Email → [bilalkhalid.dev@outlook.com](mailto:bilalkhalid.dev@outlook.com)
+
+---
+
+> Building intelligent systems, scalable infrastructure, and AI-native products.
