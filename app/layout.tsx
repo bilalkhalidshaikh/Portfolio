@@ -1,41 +1,36 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
+// Swapped Nunito for Inter (Professional/Enterprise Standard)
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+// Ignore missing type declarations for CSS side-effect import
+// @ts-ignore
 import "./globals.css";
 
-const nunito = Nunito({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Muhammad Bilal Khalid | Full-Stack AI Developer",
-  description: "Full-stack developer building AI-powered digital empires.",
+  title: "Muhammad Bilal Khalid | Senior AI Architect",
+  description: "Senior Full-Stack & Agentic AI Engineer. Architecting autonomous operational infrastructure for global enterprises.",
   metadataBase: new URL("https://bilalkhalidshaikh.vercel.app"),
   keywords: [
     "Muhammad Bilal Khalid",
-    "Bilal",
-    "AgenticAI",
-    "LLM",
+    "Agentic AI",
+    "Autonomous Systems",
+    "Full-Stack Architect",
     "Python",
-    "Frontend Developer",
-    "Full-stack Developer",
-    "AI Engineer",
-    "DOMINAIRE",
-    "Kaeno",
-    "ZAREL",
     "Next.js",
-    "React",
-    "Portfolio",
-    "Web3",
-    "OpenAI",
-    "GPT"
+    "LangGraph",
+    "Enterprise AI",
+    "Infrastructure Engineering"
   ],
   authors: [{ name: "Muhammad Bilal Khalid", url: "https://bilalkhalidshaikh.vercel.app" }],
   openGraph: {
-    title: "Muhammad Bilal Khalid | Full-Stack AI Developer",
-    description: "Building AI-powered digital empires",
+    title: "Muhammad Bilal Khalid | Senior AI Architect",
+    description: "Architecting autonomous operational infrastructure.",
     url: "https://bilalkhalidshaikh.vercel.app",
     siteName: "Bilal Khalid Portfolio",
     images: [
@@ -43,7 +38,7 @@ export const metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Bilal Khalid Portfolio",
+        alt: "Muhammad Bilal Khalid Portfolio",
       },
     ],
     type: "website",
@@ -51,8 +46,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@bilalkhalid29",
-    title: "Muhammad Bilal Khalid | Full-Stack AI Developer",
-    description: "AI-powered empire builder. Full-stack. Next.js. GPT. Web3.",
+    title: "Muhammad Bilal Khalid | Senior AI Architect",
+    description: "Senior Agentic AI & Full-Stack Architect.",
     images: ["/og.png"],
   },
   icons: {
@@ -68,14 +63,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${nunito.className} bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} bg-[#050505] text-white selection:bg-cyan-500 selection:text-white`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
             <Toaster position="top-right" />
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
             <Footer />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>

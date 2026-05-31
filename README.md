@@ -1,137 +1,89 @@
-# Muhammad Bilal Khalid — Full-Stack & Agentic AI Engineer
-
-[![Live Portfolio](https://img.shields.io/badge/View%20Portfolio-%23007ACC?style=for-the-badge\&logo=vercel\&logoColor=white)](https://bilalkhalidshaikh.vercel.app/)
-[![Email](https://img.shields.io/badge/Contact%20Me-%23007ACC?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:bilalkhalid.dev@outlook.com)
-
----
-
-## 🚀 About Me
-
-I’m **Muhammad Bilal Khalid**, a sovereign Full-Stack Developer and Agentic AI Engineer from Pakistan — crafting powerful digital realities that blend code, intelligence, and storytelling. With zero capital and 100% vision, I build futuristic platforms designed to **impact legacy, luxury, and elevation**.
-
-* ⚙️ Next.js · React · TailwindCSS · TypeScript
-* 🤖 AI Agents · Langchain · OpenAI · Serverless Intelligence
-* 📱 High-end Web & Mobile Systems
-
-I operate with precision, elegance, and sovereignty — delivering results that move the world.
-
----
-
-## 🌐 Live Preview
-
-> 🖥️ Explore the experience:
-> 👉 [**bilalkhalidshaikh.vercel.app**](https://bilalkhalidshaikh.vercel.app/)
-
-A handcrafted dark-themed masterpiece portfolio — engineered for elite performance, visual impact, and professional conversion.
-
----
-
-## 🧩 My Tech Stack
-
-| Domain      | Stack Highlights                         |
-| ----------- | ---------------------------------------- |
-| Frontend    | React, Next.js, TypeScript, Tailwind CSS, Shadcn/ui |
-| Backend     | Node.js, FastAPI, API Routes, Server Actions, Neon + Prisma |
-| AI & Agents | Agentic AI, Multi-AI Agent Systems, Langchain, OpenAI, AutoGen, CrewAI |
-| Robotics    | Humanoid Robotics, ROS 2, NVIDIA Isaac™ AI, Gazebo Simulator, Unity |
-| Cloud       | Cloud-Native, Serverless Containers, Azure Container Apps, Kubernetes |
-| DevOps      | Vercel, GitHub Actions, CI/CD, Docker, Rancher Desktop |
-| Databases   | Supabase, Firebase, PlanetScale, CockroachDB, Neo4j, Pinecone |
-| Messaging   | Kafka, RabbitMQ, Redis, Upstash Redis, CloudAMQP |
-| AI Frameworks | PyTorch, Ray, FastAI, Generative Adversarial Networks (GANs), Transformers |
-| Data Science | Data Preparation, Model Deployment, Optimization Strategies, RAG (Retrieval-Augmented Generation) |
-| Programming | Python, Asynchronous Programming (asyncio), Object-Oriented Programming (OOP), Static Typing |
-| Design      | Figma, CSS Artistry, Design Thinking, Multi-Modal User Interface |
-| Security    | Cyber Security, AI Ethics and Governance, Blockchain Integration |
-| Web3        | Smart Contracts, dApps, Metaverse, Decentralized Applications |
-| Tooling     | Yarn, Postman, ESLint, Husky, DevContainer |
-| AI Memory   | Agentic Memory, Short-Term Memory, Long-Term Memory, LangMem, mem0 |
-| Architecture| Event-Driven Architecture (EDA), Three-Tier Microservices, Stateless Computing |
-| Development | AI-First Development, Cloud-First Development, Human-in-the-Loop (HITL) Oversight |
-| Optimization | AdamW (Optimizer), Learning Rate Schedulers, Gradient Clipping, PyTorch Distributed |
-| Analytics   | Forecasting (Classical Predictive AI), Knowledge Graphs, Distributed Machine Learning |
 
 
 ---
 
-## ✨ Features
+```markdown
+# Muhammad Bilal Khalid // Principal AI Architect
 
-✅ Ultra-fast performance with dynamic routing
-✅ Modular component structure for scalability
-✅ Professional contact form with validation
-✅ SEO & Lighthouse optimized (95+ scores)
-✅ Dark/light theme support
-✅ Mobile-first responsive layout
-✅ Scroll-based animations, anchors, and UX polish
+[![Live Deployment](https://img.shields.io/badge/Live_Environment-%23000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bilalkhalidshaikh.vercel.app/)
+[![Secure Comm Link](https://img.shields.io/badge/Secure_Channel-%23050505?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:bilalkhalid.dev@outlook.com)
 
 ---
 
-## 💼 Professional Summary
+## 🗄️ System Overview
 
-I specialize in building intelligent web systems and futuristic user experiences. Whether you're a startup founder, agency lead, or visionary client, I bring:
+I am **Muhammad Bilal Khalid**, a Principal AI Architect and Distributed Systems Engineer. 
 
-* 🎯 Pixel-perfect frontend & backend execution
-* 🧠 AI-infused workflows & smart app automation
-* 🌍 Global remote collaboration with fast delivery
-* 🔐 Code quality, clarity, and clean structure
+This repository contains the source code for my digital operating environment—a demonstration of high-throughput frontend architecture, deterministic UI states, and enterprise-grade aesthetic design. It serves as the primary gateway for my architectural deployments, agentic AI case studies, and operational telemetry.
 
-I move like a product team, but work like a sovereign force — lean, elegant, unstoppable.
+I build enterprise-grade agentic AI pipelines and deterministic workflow orchestration systems, specializing in Python, React, and scalable cloud-native infrastructure.
 
 ---
 
-## 📍 Availability
+## ⚙️ V2 Architecture Updates (Latest Deployment)
 
-🛠️ Available for freelance contracts, collaborative projects, and elite digital ventures.
-🌍 Remote — operating globally from Pakistan (moving to Dubai soon).
-🧠 Time is invested only in high-impact missions.
+The current `refactor-portfolio` branch introduces a complete teardown and rebuild of the frontend infrastructure, shifting to a brutalist, high-contrast, stealth-mode UI.
+
+* **[SYS_01] Neural Twin Integration:** Deployed a client-side simulated RAG (Retrieval-Augmented Generation) terminal (`rag-terminal.tsx`) with Apple-style spring physics.
+* **[SYS_02] Glassmorphic Telemetry Navigation:** Re-architected the routing layer into an iOS-styled dynamic capsule with elite vocabulary mapping (`Core`, `Infrastructure`, `Operations`, `Arsenal`).
+* **[SYS_03] Asynchronous Load Rendering:** Rebuilt project casing and timeline components using Framer Motion layout IDs for deep-dive architectural expansion.
+* **[SYS_04] Stealth Mode Enforcement:** Eradicated standard light/dark toggles in favor of a strictly enforced, high-contrast `#050505` monolithic environment.
 
 ---
 
-## 📎 Repository Structure
+## 🧩 Core Infrastructure Stack
+
+| Operational Domain | Technology Matrix |
+| :--- | :--- |
+| **Frontend Architecture** | React, Next.js, TypeScript, Tailwind CSS, Framer Motion, Shadcn/ui |
+| **Backend & Microservices** | Node.js, FastAPI, Prisma, Serverless Actions |
+| **Agentic AI & Swarms** | LangGraph, CrewAI, AutoGen, OpenAI, Multi-Agent Orchestration |
+| **Data & Vector Storage** | Neo4j, Qdrant, Pinecone, PostgreSQL, Redis |
+| **Cloud & Deployment** | Vercel, AWS ECS, Docker, GitHub Actions CI/CD |
+| **Distributed Systems** | Kafka, RabbitMQ, WebSockets, gRPC, Asynchronous Python |
+
+---
+
+## 🚀 Local Initialization Protocol
+
+To spin up this environment locally for code review or architectural auditing:
 
 ```bash
-├── components/         # Reusable UI components
-├── app/                # Next.js App Router Pages
-├── lib/                # Custom hooks, helpers, and configs
-├── public/             # Static assets
-├── styles/             # Global and module styles
-├── types/              # TypeScript definitions
-├── README.md           # This file
-└── ...
+# 1. Clone the repository
+git clone [https://github.com/bilalkhalidshaikh/portfolio.git](https://github.com/bilalkhalidshaikh/portfolio.git)
+
+# 2. Navigate to the directory
+cd portfolio
+
+# 3. Install core dependencies
+npm install
+
+# 4. Initialize the local development server
+npm run dev
+
 ```
 
----
-
-## 🌐 SEO Keywords (Meta-optimized)
-
-`next.js full stack developer pakistan`, `typescript ai engineer`, `portfolio nextjs open source`, `nextjs freelancer 2025`, `agentic ai systems`, `bilal khalid shaikh developer`, `tailwind dark theme portfolio`, `openai langchain engineer`, `top freelance dev karachi`, `vercel deployed react portfolio`
-
-These keywords are invisibly powering your GitHub & Google visibility — stealth SEO.
+Navigate to `http://localhost:3000` to view the deployment.
 
 ---
 
-## 🛠️ Projects Coming Soon
+## 📡 Operational Telemetry & Engagement
 
-This portfolio will soon feature:
+I am available for enterprise-grade contract deployments, deterministic AI workflow orchestration, and high-level architectural consulting.
 
-* 🔧 Live project case studies
-* 📦 Open-source templates & UI kits
-* 🧬 AI agent demos & smart forms
-* 🧠 Blog with engineering deep-dives
+**Engagement Protocols:**
 
-Stay tuned.
+* **Asynchronous First:** Initial scoping and architectural reviews are conducted asynchronously.
+* **Project Scope:** I specialize in building net-new infrastructure, agentic pipelines, and rescuing failing backend systems. I do not take on routine legacy maintenance.
 
----
+**Initiate Protocol:**
 
-## 🤝 Let’s Build the Future
-
-If you want software built with **intention, intelligence, and indestructible quality** — then you're at the right place.
-
-📧 Email me at: **[bilalkhalid.dev@outlook.com](mailto:bilalkhalid.dev@outlook.com)**
-🔗 Portfolio: [https://bilalkhalidshaikh.vercel.app](https://bilalkhalidshaikh.vercel.app)
+* **Email:** [bilalkhalid.dev@outlook.com]()
+* **LinkedIn:** [Executive Profile](https://www.google.com/search?q=https://www.linkedin.com/in/bilalkhalidshaikh/)
+* **X.com:** [Live Updates](https://www.google.com/search?q=https://twitter.com/bilalkhalid29/)
 
 ---
 
-> **Work with me once — and you'll never look for another developer again.**
+*Built by Muhammad Bilal Khalid. All rights reserved.*
 
----
+```
