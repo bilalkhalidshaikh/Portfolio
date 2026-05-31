@@ -373,7 +373,6 @@
 
 
 
-
 "use client";
 
 import React from "react";
@@ -383,7 +382,7 @@ import { useSectionInView } from "@/lib/hooks";
 /**
  * Intro Section - Enterprise Grade
  * Purpose: Signal high-level architectural authority.
- * Layout: Brutalist, High-Contrast, Minimalist.
+ * Layout: Brutalist, High-Contrast, Minimalist, Fully Responsive.
  */
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -392,55 +391,53 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      // Removed the cyan selection color, replaced with stealth white/black
-      className="w-full min-h-[90vh] flex flex-col justify-center items-center px-6 pt-32 pb-20 sm:px-12 scroll-mt-[100rem] selection:bg-white selection:text-black"
+      // Added relative and overflow-hidden to lock background grid
+      className="relative overflow-hidden w-full min-h-[90vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-32 pb-16 sm:pb-20 scroll-mt-[100rem] selection:bg-white selection:text-black"
     >
-      <div className="max-w-[70rem] w-full">
+      <div className="max-w-[70rem] w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Identity & Authority Label */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-10 border-l-2 border-zinc-500 pl-6">
-            <span className="text-white font-mono text-sm sm:text-base tracking-[0.2em] uppercase font-bold">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-6 sm:mb-10 border-l-2 border-zinc-500 pl-4 sm:pl-6">
+            <span className="text-white font-mono text-xs sm:text-sm lg:text-base tracking-[0.15em] sm:tracking-[0.2em] uppercase font-bold break-words">
               Muhammad Bilal Khalid
             </span>
-            <span className="hidden sm:inline text-zinc-600">//</span>
-            <span className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-zinc-400">
+            <span className="hidden sm:inline text-zinc-600">{"//"}</span>
+            <span className="text-[9px] sm:text-[10px] lg:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-zinc-400">
               Principal AI Architect
             </span>
           </div>
 
-          {/* Bold, Static Headline */}
-          <h1 className="text-5xl md:text-8xl font-bold text-white leading-[0.95] mb-12 tracking-tighter">
+          {/* Bold, Fluid Headline */}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] sm:leading-[0.95] mb-8 sm:mb-12 tracking-tight sm:tracking-tighter">
             Architecting <br />
             <span className="text-zinc-600">Autonomous Scale.</span>
           </h1>
 
-          {/* Static Value Proposition */}
-          <div className="text-xl md:text-3xl text-gray-300 font-light mb-20 max-w-3xl leading-relaxed">
+          {/* Value Proposition */}
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 font-light mb-12 sm:mb-20 max-w-3xl leading-relaxed">
             <p className="mb-4">
               I build enterprise-grade agentic AI pipelines and deterministic workflow orchestration systems.
             </p>
-            <p className="text-zinc-500">
+            <p className="text-zinc-500 text-base sm:text-lg lg:text-2xl">
               Specializing in Python, React, and scalable cloud-native infrastructure for high-growth global startups.
             </p>
           </div>
 
-          {/* Action Buttons: Minimalist & Clean */}
-          <div className="flex flex-wrap gap-4 text-[11px] uppercase tracking-[0.2em] font-semibold">
+          {/* Action Buttons: Responsive Stack/Row */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold">
             <a
               href="#contact"
-              // Removed neon cyan hover, replaced with premium zinc-200
-              className="group flex items-center px-8 py-4 bg-white text-black hover:bg-zinc-300 transition-all duration-300 ease-in-out cursor-pointer"
+              className="group flex justify-center items-center px-6 sm:px-8 py-4 sm:py-5 bg-white text-black hover:bg-zinc-300 transition-all duration-300 ease-in-out cursor-pointer w-full sm:w-auto text-center"
             >
               <span>Engage Architect</span>
             </a>
             <a
               href="#projects"
-              // Removed cyan hover borders, replaced with crisp white/10 fill
-              className="flex items-center px-8 py-4 border border-white/10 text-white hover:bg-white/[0.05] hover:border-white/30 transition-all duration-300 ease-in-out cursor-pointer"
+              className="flex justify-center items-center px-6 sm:px-8 py-4 sm:py-5 border border-white/10 text-white hover:bg-white/[0.05] hover:border-white/30 transition-all duration-300 ease-in-out cursor-pointer w-full sm:w-auto text-center"
             >
               <span>View Infrastructure</span>
             </a>
@@ -448,8 +445,8 @@ export default function Intro() {
         </motion.div>
       </div>
 
-      {/* Subtle Grid Background */}
-      <div className="absolute inset-0 z-[-1] pointer-events-none opacity-[0.03]">
+      {/* Subtle Grid Background - Safely contained */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
       </div>
     </section>
