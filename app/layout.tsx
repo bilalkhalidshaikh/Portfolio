@@ -35,7 +35,7 @@ export const metadata = {
     siteName: "Bilal Khalid Portfolio",
     images: [
       {
-        url: "/og.png",
+        url: "/bilalportfolio.PNG",
         width: 1200,
         height: 630,
         alt: "Muhammad Bilal Khalid Portfolio",
@@ -48,7 +48,7 @@ export const metadata = {
     site: "@bilalkhalid29",
     title: "Muhammad Bilal Khalid | Senior AI Architect",
     description: "Senior Agentic AI & Full-Stack Architect.",
-    images: ["/og.png"],
+    images: ["/bilalportfolio.PNG"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -64,10 +64,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // className={`${inter.className} bg-[#050505] text-white selection:bg-cyan-500 selection:text-white scroll-smooth`}
+        className={`${inter.className} bg-[#050505] text-white selection:bg-cyan-500 selection:text-white scroll-smooth`}
        // REMOVED ALL CLASSES except these two. 
         // We do NOT want flex or min-h-screen here.
-        className={`${inter.className} bg-[#050505] text-white`}
+        // className={`${inter.className} bg-[#050505] text-white`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

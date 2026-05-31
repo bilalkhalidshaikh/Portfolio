@@ -372,7 +372,6 @@
 // }
 
 
-
 "use client";
 
 import React from "react";
@@ -391,8 +390,8 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      // Added relative and overflow-hidden to lock background grid
-      className="relative overflow-hidden w-full min-h-[90vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-32 pb-16 sm:pb-20 scroll-mt-[100rem] selection:bg-white selection:text-black"
+      // FIX: Increased mobile top padding (pt-32 -> pt-40) to prevent header overlap
+      className="relative overflow-hidden w-full min-h-[90vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 pt-40 sm:pt-32 pb-10 sm:pb-20 scroll-mt-[100rem] selection:bg-white selection:text-black"
     >
       <div className="max-w-[70rem] w-full relative z-10">
         <motion.div
@@ -401,6 +400,7 @@ export default function Intro() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Identity & Authority Label */}
+          {/* Added mt-4 for mobile to ensure clear air from the header */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-6 sm:mb-10 border-l-2 border-zinc-500 pl-4 sm:pl-6">
             <span className="text-white font-mono text-xs sm:text-sm lg:text-base tracking-[0.15em] sm:tracking-[0.2em] uppercase font-bold break-words">
               Muhammad Bilal Khalid
