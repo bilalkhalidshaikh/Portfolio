@@ -222,7 +222,6 @@
 // }
 
 
-
 "use client";
 
 import React from "react";
@@ -238,23 +237,25 @@ export default function Education() {
     <section
       id="education"
       ref={ref}
-      className="relative z-10 w-full max-w-[75rem] mx-auto px-4 sm:px-8 md:px-12 mb-28 sm:mb-40 scroll-mt-28"
+      // Added overflow-hidden on mobile to absolutely guarantee zero horizontal bleed
+      className="relative z-10 w-full max-w-[75rem] mx-auto px-4 sm:px-8 md:px-12 mb-20 sm:mb-40 scroll-mt-28 overflow-hidden sm:overflow-visible"
     >
-      {/* Muted Stealth Background Glow */}
-      <div className="absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-zinc-900/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+      {/* Muted Stealth Background Glow - Scaled and centered for mobile */}
+      <div className="absolute top-[10%] sm:top-[20%] left-[50%] -translate-x-1/2 sm:translate-x-0 sm:left-[20%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-zinc-900/10 rounded-full blur-[80px] sm:blur-[150px] pointer-events-none mix-blend-screen" />
 
       {/* Header - Left Aligned to match the Experience section perfectly */}
-      <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 gap-8 border-b border-white/5 pb-12">
+      <div className="flex flex-col md:flex-row md:items-start justify-between mb-12 sm:mb-16 gap-6 sm:gap-8 border-b border-white/5 pb-8 sm:pb-12 relative z-10">
         <div className="max-w-4xl text-left">
-          <div className="flex items-center justify-start gap-3 text-zinc-500 font-mono text-xs uppercase tracking-[0.3em] mb-4">
-            <span className="w-2 h-2 rounded-full bg-zinc-500 animate-pulse" /> ACADEMIC FOUNDATION
+          <div className="flex items-center justify-start gap-2 sm:gap-3 text-zinc-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-4">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-zinc-500 animate-pulse flex-shrink-0" /> 
+            <span className="truncate">ACADEMIC FOUNDATION</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans mb-6">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans mb-4 sm:mb-6 leading-tight">
             Education & Credentials
           </h2>
           
-          <p className="text-zinc-400 text-lg lg:text-xl font-light leading-relaxed">
+          <p className="text-zinc-400 text-sm sm:text-lg lg:text-xl font-light leading-relaxed">
             Formal academic training and specialized certifications establishing the theoretical 
             and practical baseline for distributed systems and AI architecture.
           </p>
@@ -270,35 +271,38 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative flex flex-col md:flex-row md:items-start justify-between py-8 sm:py-12 border-b border-white/5 hover:bg-white/[0.02] transition-colors duration-500 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-[2rem]"
+            // Scaled padding and negative margins for mobile devices
+            className="group relative flex flex-col md:flex-row md:items-start justify-between py-8 sm:py-12 border-b border-white/5 hover:bg-white/[0.02] transition-colors duration-500 px-2 sm:px-8 -mx-2 sm:-mx-8 rounded-2xl sm:rounded-[2rem]"
           >
             {/* Left Column: Date & Institution */}
-            <div className="flex flex-col w-full md:w-1/3 mb-6 md:mb-0 pr-4">
-              <span className="text-xs sm:text-sm font-mono text-zinc-500/80 mb-3 tracking-widest uppercase group-hover:text-zinc-400 transition-colors">
+            <div className="flex flex-col w-full md:w-1/3 mb-6 md:mb-0 pr-0 sm:pr-4">
+              <span className="text-[10px] sm:text-sm font-mono text-zinc-500/80 mb-2 sm:mb-3 tracking-widest uppercase group-hover:text-zinc-400 transition-colors">
                 {edu.date}
               </span>
-              <h4 className="text-2xl sm:text-3xl font-bold text-white tracking-tight group-hover:text-zinc-300 transition-colors">
+              <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-tight group-hover:text-zinc-300 transition-colors leading-tight">
                 {edu.institution}
               </h4>
             </div>
 
             {/* Right Column: Degree & Focus */}
             <div className="flex flex-col w-full md:w-2/3 md:pl-8">
-              <div className="flex items-start gap-4 mb-5">
-                <FaGraduationCap className="text-zinc-600 group-hover:text-zinc-400 transition-colors text-2xl mt-1 flex-shrink-0 drop-shadow-[0_0_10px_rgba(255,255,255,0.05)] group-hover:drop-shadow-[0_0_15px_rgba(161,161,170,0.4)]" />
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-200 group-hover:text-white transition-colors tracking-tight">
+              <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5">
+                <FaGraduationCap className="text-zinc-600 group-hover:text-zinc-400 transition-colors text-xl sm:text-2xl mt-0.5 sm:mt-1 flex-shrink-0 drop-shadow-[0_0_10px_rgba(255,255,255,0.05)] group-hover:drop-shadow-[0_0_15px_rgba(161,161,170,0.4)]" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-200 group-hover:text-white transition-colors tracking-tight leading-snug">
                   {edu.degree}
                 </h3>
               </div>
               
-              {/* Terminal-style Focus Box */}
-              <div className="bg-black/50 border border-white/5 rounded-2xl p-6 ml-0 sm:ml-10 group-hover:border-white/10 transition-colors duration-300 shadow-inner">
-                <p className="text-sm sm:text-base font-light text-gray-400 leading-relaxed">
-                  <span className="text-zinc-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] mr-4 border-r border-white/10 pr-4">
+              {/* Terminal-style Focus Box - Fully rebuilt for fluid flex wrapping */}
+              <div className="bg-black/50 border border-white/5 rounded-xl sm:rounded-2xl p-4 sm:p-6 ml-0 sm:ml-10 group-hover:border-white/10 transition-colors duration-300 shadow-inner">
+                <div className="text-xs sm:text-sm lg:text-base font-light text-gray-400 leading-relaxed flex flex-col sm:block">
+                  <span className="text-zinc-500 font-mono text-[9px] sm:text-[10px] lg:text-xs uppercase tracking-[0.2em] mb-2 sm:mb-0 sm:mr-4 border-b sm:border-b-0 sm:border-r border-white/10 pb-2 sm:pb-0 sm:pr-4 block sm:inline-block w-fit">
                     FOCUS
                   </span>
-                  {edu.focus}
-                </p>
+                  <span className="mt-2 sm:mt-0 block sm:inline">
+                    {edu.focus}
+                  </span>
+                </div>
               </div>
             </div>
           </motion.div>

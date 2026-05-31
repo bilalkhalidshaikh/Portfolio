@@ -55,22 +55,25 @@ export const metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en">
       <body
-        className={`${inter.className} bg-[#050505] text-white selection:bg-cyan-500 selection:text-white`}
+        // className={`${inter.className} bg-[#050505] text-white selection:bg-cyan-500 selection:text-white scroll-smooth`}
+       // REMOVED ALL CLASSES except these two. 
+        // We do NOT want flex or min-h-screen here.
+        className={`${inter.className} bg-[#050505] text-white`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
-            {children}
+           <main>{children}</main>
             <Toaster position="top-right" />
-            {/* <ThemeSwitch /> */}
             <Footer />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>

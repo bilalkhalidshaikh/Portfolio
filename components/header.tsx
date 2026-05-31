@@ -64,8 +64,6 @@
 //   );
 // }
 
-
-
 "use client";
 
 import React from "react";
@@ -77,7 +75,6 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 // ==========================================
 // ELITE VOCABULARY MAPPING
-// Intercepts standard links to display high-worth terms
 // ==========================================
 const navLabels: Record<string, string> = {
   Home: "Core",
@@ -93,31 +90,31 @@ export default function Header() {
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        // Expanded width to sm:w-[50rem] to give massive breathing room left and right
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[50rem] sm:rounded-full dark:bg-white dark:border-white/40 dark:bg-opacity-80"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
-
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        {/* Increased sm:gap-5 to sm:gap-6 for more internal breathing room */}
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-6 px-4">
+    <header className="z-[999] relative flex justify-center">
+      <motion.nav
+        // 1. Merged background and nav container for flawless fluid scaling.
+        // 2. Mobile gets a floating w-[95%] rounded-3xl pill that scales its height automatically.
+        // 3. Stealth V2 aesthetics applied globally.
+        className="fixed top-4 sm:top-6 w-[95%] sm:w-[52rem] h-auto rounded-3xl sm:rounded-full border border-white/10 bg-[#050505]/80 shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-2xl py-2 px-2 sm:px-6 flex items-center justify-center transition-all duration-300"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+      >
+        {/* Dynamic wrapping logic: wraps tightly on mobile, flat row on desktop */}
+        <ul className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-x-1 gap-y-1 sm:gap-2 text-[11px] sm:text-[13px] font-semibold text-zinc-400 w-full">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center relative"
+              className="relative flex items-center justify-center"
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 className={clsx(
-                  // Increased px-3 to px-5 to make the hitboxes wider and text less cramped
-                  "flex w-full items-center justify-center px-5 py-3 hover:text-gray-900 transition dark:text-gray-600 dark:hover:text-gray-900",
+                  // Scaled hitboxes for mobile (px-3 py-2) vs desktop (px-5 py-2.5)
+                  "flex items-center justify-center px-3 py-2 sm:px-5 sm:py-2.5 rounded-full hover:text-white transition-colors duration-300 whitespace-nowrap",
                   {
-                    "text-gray-950 dark:text-gray-950 font-semibold":
-                      activeSection === link.name,
+                    // Active text must turn black to contrast against the white pill
+                    "text-black": activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -126,13 +123,15 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {/* Dictionary rendering */}
-                {navLabels[link.name] || link.name}
+                {/* z-10 ensures text sits above the animated background pill */}
+                <span className="relative z-10 tracking-wide">
+                  {navLabels[link.name] || link.name}
+                </span>
 
+                {/* The iOS segmented active state pill */}
                 {link.name === activeSection && (
                   <motion.span
-                    // Upgraded the active pill to an iOS-style shadowed element
-                    className="bg-white rounded-full absolute inset-0 -z-10 shadow-[0_2px_10px_rgba(0,0,0,0.1)] border border-black/[0.04]"
+                    className="bg-white rounded-full absolute inset-0 z-0 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -145,7 +144,7 @@ export default function Header() {
             </motion.li>
           ))}
         </ul>
-      </nav>
+      </motion.nav>
     </header>
   );
 }

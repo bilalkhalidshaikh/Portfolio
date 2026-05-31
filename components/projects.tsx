@@ -338,6 +338,7 @@
 //   );
 // }
 
+
 "use client";
 
 import React, { useState } from "react";
@@ -375,7 +376,8 @@ export default function Projects() {
     <section
       ref={ref}
       id="projects"
-      className="w-screen max-w-[100vw] relative left-1/2 -translate-x-1/2 scroll-mt-28 py-24 bg-[#050505] border-y border-white/[0.04] overflow-hidden"
+      // Fixed w-screen bug, tightened mobile padding (py-16 -> py-24)
+      className="w-full max-w-[100vw] relative left-1/2 -translate-x-1/2 scroll-mt-28 py-16 sm:py-24 bg-[#050505] border-y border-white/[0.04] overflow-hidden"
     >
       {/* Hyper-Premium Ambient Spatial Lighting Elements */}
       <div className="absolute top-[-10%] left-[-10%] w-[1000px] h-[1000px] bg-cyan-950/20 rounded-full blur-[180px] pointer-events-none mix-blend-screen" />
@@ -392,17 +394,17 @@ export default function Projects() {
               exit={{ opacity: 0, scale: 0.98, filter: "blur(12px)" }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
-              {/* Header block spanning wide */}
-              <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 border-b border-white/5 pb-12">
-                <div className="max-w-3xl">
-                  <div className="flex items-center gap-3 text-cyan-500 font-mono text-xs uppercase tracking-[0.3em] mb-4">
-                    <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />{" "}
-                    PRODUCTION READY INFRASTRUCTURE
+              {/* Header block spanning wide - Flex column on mobile, row on desktop */}
+              <div className="flex flex-col xl:flex-row xl:items-end justify-between mb-12 sm:mb-20 gap-6 sm:gap-8 border-b border-white/5 pb-8 sm:pb-12">
+                <div className="max-w-3xl w-full">
+                  <div className="flex items-center gap-3 text-cyan-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-4">
+                    <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse flex-shrink-0" />{" "}
+                    <span className="truncate">PRODUCTION READY INFRASTRUCTURE</span>
                   </div>
-                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans">
+                  <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans leading-tight">
                     Architectural Deployments & Case Studies
                   </h2>
-                  <p className="text-gray-400 mt-4 text-lg lg:text-xl font-light leading-relaxed">
+                  <p className="text-gray-400 mt-4 text-base sm:text-lg lg:text-xl font-light leading-relaxed">
                     A curated index of stateful multi-agent coordination
                     frameworks, autonomous orchestration kernels, and
                     high-throughput data layers validated for enterprise
@@ -410,14 +412,14 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Apple-Style Navigation Control Grid */}
-                <div className="flex-shrink-0">
-                  <nav className="flex p-1.5 bg-white/[0.02] backdrop-blur-3xl rounded-2xl border border-white/10 shadow-[2xl]">
+                {/* Apple-Style Navigation Control Grid - Swipeable on mobile */}
+                <div className="flex-shrink-0 w-full xl:w-auto overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pb-2 xl:pb-0 -mx-4 px-4 xl:mx-0 xl:px-0">
+                  <nav className="flex w-max xl:w-auto p-1.5 bg-white/[0.02] backdrop-blur-3xl rounded-2xl border border-white/10 shadow-[2xl] gap-1">
                     {categories.map((category) => (
                       <button
                         key={category.key}
                         onClick={() => setActiveCategory(category.key)}
-                        className={`relative px-6 py-3 text-xs lg:text-sm font-semibold tracking-wide rounded-xl transition-all duration-300 ${
+                        className={`relative px-4 py-2 sm:px-6 sm:py-3 text-[11px] sm:text-xs lg:text-sm font-semibold tracking-wide rounded-xl transition-all duration-300 whitespace-nowrap ${
                           activeCategory === category.key
                             ? "text-white"
                             : "text-gray-500 hover:text-gray-300"
@@ -442,57 +444,57 @@ export default function Projects() {
               </div>
 
               {/* Dynamic Ultra-Wide Dashboard Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-                {displayedProjects.map((project, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+                {displayedProjects.map((project) => (
                   <motion.div
                     key={project.id}
                     layoutId={`card-container-${project.id}`}
                     onClick={() => setSelectedProject(project)}
-                    className="group relative flex flex-col justify-between p-8 sm:p-10 rounded-[2rem] bg-white/[0.01] backdrop-blur-xl border border-white/[0.04] hover:bg-white/[0.03] hover:border-cyan-500/30 hover:shadow-[0_0_50px_rgba(6,182,212,0.08)] transition-all duration-500 ease-out cursor-pointer overflow-hidden min-h-[400px]"
+                    className="group relative flex flex-col justify-between p-6 sm:p-10 rounded-[2rem] bg-white/[0.01] backdrop-blur-xl border border-white/[0.04] hover:bg-white/[0.03] hover:border-cyan-500/30 hover:shadow-[0_0_50px_rgba(6,182,212,0.08)] transition-all duration-500 ease-out cursor-pointer overflow-hidden min-h-[350px] sm:min-h-[400px]"
                   >
                     {/* Animated Edge Border Highlight */}
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-transparent group-hover:from-cyan-500/10 transition-all duration-700 pointer-events-none" />
 
                     <div>
                       {/* Top Header Row Inside Card */}
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="text-[10px] font-mono tracking-[0.25em] text-cyan-400 font-semibold uppercase flex items-center gap-2 bg-cyan-950/30 px-3 py-1.5 rounded-lg border border-cyan-500/10">
-                          <FaGlobe className="text-cyan-500 text-xs" />{" "}
-                          {project.location}
+                      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8">
+                        <div className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.25em] text-cyan-400 font-semibold uppercase flex items-center gap-2 bg-cyan-950/30 px-3 py-1.5 rounded-lg border border-cyan-500/10">
+                          <FaGlobe className="text-cyan-500 text-xs flex-shrink-0" />{" "}
+                          <span className="truncate max-w-[120px] sm:max-w-none">{project.location}</span>
                         </div>
-                        <span className="text-[11px] font-mono text-gray-600 group-hover:text-cyan-500 transition-colors">
-                          [ DETAILED ACCESS // ]
+                        <span className="text-[10px] sm:text-[11px] font-mono text-gray-600 group-hover:text-cyan-500 transition-colors hidden sm:block">
+                          [ DETAILED ACCESS {"//"} ]
                         </span>
                       </div>
 
                       {/* Title & Desc */}
-                      <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-4 group-hover:text-zinc-300 transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white mb-3 sm:mb-4 group-hover:text-zinc-300 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="text-gray-400 font-light leading-relaxed mb-8 text-sm sm:text-base">
+                      <p className="text-gray-400 font-light leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base line-clamp-3">
                         {project.shortDescription}
                       </p>
                     </div>
 
                     {/* Quick Metrics Snippet Panel */}
-                    <div className="space-y-3 mb-8 bg-black/40 p-4 rounded-xl border border-white/5">
+                    <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 bg-black/40 p-3 sm:p-4 rounded-xl border border-white/5">
                       {project.metrics.slice(0, 2).map((metric, mIdx) => (
                         <div
                           key={mIdx}
-                          className="flex items-center text-xs font-mono text-gray-300"
+                          className="flex items-start sm:items-center text-[11px] sm:text-xs font-mono text-gray-300"
                         >
-                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3 animate-ping" />
-                          {metric}
+                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-2 sm:mr-3 mt-1.5 sm:mt-0 animate-ping flex-shrink-0" />
+                          <span className="leading-tight">{metric}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Bottom Tech Layout Tags */}
-                    <div className="flex flex-wrap gap-2 pt-6 border-t border-white/[0.05]">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-4 sm:pt-6 border-t border-white/[0.05]">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-1 text-[9px] font-mono font-medium text-gray-400 bg-white/[0.03] border border-white/5 rounded-md"
+                          className="px-2 sm:px-2.5 py-1 text-[8px] sm:text-[9px] font-mono font-medium text-gray-400 bg-white/[0.03] border border-white/5 rounded-md"
                         >
                           {tag}
                         </span>
@@ -509,22 +511,22 @@ export default function Projects() {
             <motion.div
               key="detail-view"
               layoutId={`card-container-${selectedProject.id}`}
-              className="w-full bg-[#090909]/90 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-6 sm:p-12 lg:p-16 relative overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
+              className="w-full bg-[#090909]/90 backdrop-blur-3xl border border-white/10 rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-10 lg:p-16 relative overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
               transition={{ type: "spring", stiffness: 220, damping: 26 }}
             >
               {/* Internal Abstract Core Visual Light */}
-              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-500/[0.03] rounded-full blur-[120px] pointer-events-none" />
+              <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-cyan-500/[0.03] rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
 
               {/* Breadcrumb Operating Terminal Control */}
-              <div className="flex items-center justify-between mb-16 border-b border-white/5 pb-6">
+              <div className="flex items-center justify-between mb-8 sm:mb-16 border-b border-white/5 pb-4 sm:pb-6">
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="group flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-mono text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="group flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] font-mono text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   <FaArrowLeft className="group-hover:-translate-x-1.5 transition-transform duration-300" />
-                  <span>sys // exit_explorer</span>
+                  <span>sys {"//"} exit_explorer</span>
                 </button>
-                <div className="text-xs font-mono text-gray-500 hidden sm:block">
+                <div className="text-[10px] sm:text-xs font-mono text-gray-500 hidden sm:block">
                   LOC_ID:{" "}
                   <span className="text-gray-300">
                     {selectedProject.id.toUpperCase()}
@@ -533,30 +535,30 @@ export default function Projects() {
               </div>
 
               {/* Core Spatial Column Splits */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 relative z-10">
                 {/* Left Deep Information Container Blocks (8-Columns wide) */}
-                <div className="lg:col-span-8 space-y-12">
+                <div className="lg:col-span-8 space-y-8 sm:space-y-12">
                   <div>
-                    <div className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-cyan-400 uppercase mb-4 bg-cyan-950/40 border border-cyan-500/20 px-3 py-1 rounded-md">
-                      <FaServer /> {selectedProject.client} &bull;{" "}
-                      {selectedProject.location}
+                    <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-mono tracking-widest text-cyan-400 uppercase mb-4 bg-cyan-950/40 border border-cyan-500/20 px-3 py-1 rounded-md flex-wrap">
+                      <FaServer className="flex-shrink-0" /> 
+                      <span className="truncate">{selectedProject.client} &bull; {selectedProject.location}</span>
                     </div>
-                    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+                    <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-white mb-4 sm:mb-6 leading-tight">
                       {selectedProject.title}
                     </h2>
-                    <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed">
+                    <p className="text-base sm:text-xl text-gray-300 font-light leading-relaxed">
                       {selectedProject.fullDescription}
                     </p>
                   </div>
 
                   {/* Structural Challenge and Solution Comparison Matrix */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                    <div className="bg-[#111]/40 p-8 rounded-2xl border border-white/5 space-y-4">
-                      <div className="flex items-center gap-3 text-gray-400 font-mono text-xs uppercase tracking-widest">
-                        <FaLaptop className="text-red-500/70" /> Structural
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                    <div className="bg-[#111]/40 p-5 sm:p-8 rounded-2xl border border-white/5 space-y-3 sm:space-y-4">
+                      <div className="flex items-center gap-2 sm:gap-3 text-gray-400 font-mono text-[10px] sm:text-xs uppercase tracking-widest">
+                        <FaLaptop className="text-red-500/70 flex-shrink-0" /> Structural
                         Blockers
                       </div>
-                      <h4 className="text-white text-lg font-semibold">
+                      <h4 className="text-white text-base sm:text-lg font-semibold">
                         The Target Challenge
                       </h4>
                       <p className="text-gray-400 font-light text-sm sm:text-base leading-relaxed">
@@ -564,12 +566,12 @@ export default function Projects() {
                       </p>
                     </div>
 
-                    <div className="bg-cyan-950/10 p-8 rounded-2xl border border-cyan-500/20 space-y-4">
-                      <div className="flex items-center gap-3 text-cyan-400 font-mono text-xs uppercase tracking-widest">
-                        <FaTerminal className="text-cyan-400" /> Engineering
+                    <div className="bg-cyan-950/10 p-5 sm:p-8 rounded-2xl border border-cyan-500/20 space-y-3 sm:space-y-4">
+                      <div className="flex items-center gap-2 sm:gap-3 text-cyan-400 font-mono text-[10px] sm:text-xs uppercase tracking-widest">
+                        <FaTerminal className="text-cyan-400 flex-shrink-0" /> Engineering
                         Protocol
                       </div>
-                      <h4 className="text-white text-lg font-semibold">
+                      <h4 className="text-white text-base sm:text-lg font-semibold">
                         The Core Implementation
                       </h4>
                       <p className="text-gray-300 font-light text-sm sm:text-base leading-relaxed">
@@ -580,16 +582,16 @@ export default function Projects() {
 
                   {/* High Grade Client Testimony Section */}
                   {selectedProject.testimonial && (
-                    <div className="relative bg-white/[0.01] p-8 rounded-2xl border border-white/[0.03] mt-8">
-                      <FaQuoteLeft className="text-3xl text-cyan-500/10 absolute top-4 left-4" />
-                      <p className="text-lg italic text-gray-300 font-light relative z-10 pl-6 mb-4">
+                    <div className="relative bg-white/[0.01] p-6 sm:p-8 rounded-2xl border border-white/[0.03] mt-8">
+                      <FaQuoteLeft className="text-2xl sm:text-3xl text-cyan-500/10 absolute top-4 left-4" />
+                      <p className="text-base sm:text-lg italic text-gray-300 font-light relative z-10 pl-4 sm:pl-6 mb-4 leading-relaxed">
                         "{selectedProject.testimonial.quote}"
                       </p>
-                      <div className="pl-6 border-l border-cyan-500/30">
-                        <span className="block text-white font-mono text-sm font-bold">
+                      <div className="pl-4 sm:pl-6 border-l border-cyan-500/30">
+                        <span className="block text-white font-mono text-xs sm:text-sm font-bold">
                           {selectedProject.testimonial.author}
                         </span>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-[10px] sm:text-xs text-gray-500">
                           {selectedProject.testimonial.role}
                         </span>
                       </div>
@@ -598,21 +600,21 @@ export default function Projects() {
                 </div>
 
                 {/* Right Interactive Telemetry Graph & Analytics Control Blocks (4-Columns wide) */}
-                <div className="lg:col-span-4 space-y-10 bg-white/[0.01] p-6 sm:p-8 rounded-3xl border border-white/5">
+                <div className="lg:col-span-4 space-y-8 sm:space-y-10 bg-white/[0.01] p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/5">
                   {/* Real Interactive Metrics Data Engine Visualizer */}
                   <div>
-                    <h4 className="text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-6 flex items-center gap-2 border-b border-white/10 pb-3">
-                      <FaChartLine className="text-cyan-500" /> Pipeline
+                    <h4 className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-5 sm:mb-6 flex items-center gap-2 border-b border-white/10 pb-3">
+                      <FaChartLine className="text-cyan-500 flex-shrink-0" /> Pipeline
                       Analytics
                     </h4>
 
                     {/* Live Progress Bar Data Visualisations */}
-                    <div className="space-y-5">
+                    <div className="space-y-4 sm:space-y-5">
                       {selectedProject.vitals.map((vital, idx) => (
                         <div key={idx} className="space-y-2">
-                          <div className="flex justify-between text-xs font-mono">
+                          <div className="flex justify-between text-[10px] sm:text-xs font-mono">
                             <span className="text-gray-400">{vital.label}</span>
-                            <span className="text-cyan-400 font-bold">
+                            <span className="text-cyan-400 font-bold ml-2">
                               {vital.value}
                             </span>
                           </div>
@@ -636,19 +638,19 @@ export default function Projects() {
 
                   {/* Production Key Results Checklist */}
                   <div>
-                    <h4 className="text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-4 border-b border-white/10 pb-3">
+                    <h4 className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-3 sm:mb-4 border-b border-white/10 pb-3">
                       Validated Benchmarks
                     </h4>
-                    <ul className="space-y-3 font-mono text-xs">
+                    <ul className="space-y-2 sm:space-y-3 font-mono text-[10px] sm:text-xs">
                       {selectedProject.metrics.map((metric, i) => (
                         <li
                           key={i}
-                          className="flex items-start text-gray-300 bg-black/40 p-3 rounded-lg border border-white/5"
+                          className="flex items-start text-gray-300 bg-black/40 p-2.5 sm:p-3 rounded-lg border border-white/5"
                         >
-                          <span className="text-green-400 mr-2 font-bold">
+                          <span className="text-green-400 mr-2 font-bold flex-shrink-0 mt-0.5">
                             [&bull;]
                           </span>
-                          <span>{metric}</span>
+                          <span className="leading-snug">{metric}</span>
                         </li>
                       ))}
                     </ul>
@@ -656,17 +658,17 @@ export default function Projects() {
 
                   {/* Complete Layer Architecture Blueprints */}
                   <div>
-                    <h4 className="text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-4 border-b border-white/10 pb-3">
+                    <h4 className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-3 sm:mb-4 border-b border-white/10 pb-3">
                       Architecture Stack Layers
                     </h4>
                     <ul className="space-y-2">
                       {selectedProject.architecture.map((layer, i) => (
                         <li
                           key={i}
-                          className="flex items-center text-xs text-gray-300 font-mono bg-white/[0.02] p-2.5 rounded-md border border-white/5"
+                          className="flex items-center text-[10px] sm:text-xs text-gray-300 font-mono bg-white/[0.02] p-2 sm:p-2.5 rounded-md border border-white/5"
                         >
-                          <FaDatabase className="text-cyan-500/60 mr-3 text-[10px]" />{" "}
-                          {layer}
+                          <FaDatabase className="text-cyan-500/60 mr-2 sm:mr-3 text-[9px] sm:text-[10px] flex-shrink-0" />{" "}
+                          <span className="truncate">{layer}</span>
                         </li>
                       ))}
                     </ul>
@@ -674,14 +676,14 @@ export default function Projects() {
 
                   {/* Complete Infrastructure Tags Container */}
                   <div>
-                    <h4 className="text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-4 border-b border-white/10 pb-3">
+                    <h4 className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-mono text-gray-400 mb-3 sm:mb-4 border-b border-white/10 pb-3">
                       Deployment Index Tags
                     </h4>
                     <div className="flex flex-wrap gap-1.5">
                       {selectedProject.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-1 text-[9px] font-mono text-white bg-white/10 rounded border border-white/10"
+                          className="px-2 py-1 text-[8px] sm:text-[9px] font-mono text-white bg-white/10 rounded border border-white/10"
                         >
                           {tag}
                         </span>
